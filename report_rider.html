@@ -1,0 +1,234 @@
+
+    <html>
+    <head>
+        <title>BÁO CÁO CUỐC XE HÀNG THÁNG</title>
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <style>
+            /* Định dạng mục lục cố định */
+            #toc {
+                position: fixed;
+                top: 50px;
+                left: 20px;
+                width: 220px;
+                max-height: 80vh;
+                overflow-y: auto;
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                font-family: Arial, sans-serif;
+            }
+
+            #toc ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            #toc > ul > li {
+                margin-bottom: 10px;
+            }
+
+            #toc a {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: bold;
+                display: block;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            #toc a:hover {
+                color: #fff;
+                background: #007bff;
+            }
+
+            #toc ul ul {
+                padding-left: 15px;
+                font-size: 14px;
+            }
+
+            #toc ul ul li {
+                margin-bottom: 5px;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin-left: 270px;
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                max-width: 900px;
+            }
+
+            /* Ẩn tất cả nội dung ban đầu */
+            .section {
+                display: none;
+            }
+
+            /* Hiển thị phần đang được chọn */
+            .active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toc">
+            <h3>Mục lục</h3>
+            <ul>
+                <li>
+                    <a onclick="showSection('tong-quan')">Tổng quan</a>
+                </li>
+                <li>
+                    <a onclick="showSection('cuoc-xe-toi-ICOOL')">Cuốc xe tới ICOOL</a>
+                </li>
+                <li>
+                    <a onclick="showSection('cuoc-xe-tu-ICOOL-ve')">Cuốc xe từ ICOOL về</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tong-quan" class="section">
+            <h2>Tổng quan</h2>
+            <p>Báo cáo cuốc xe hàng tháng sẽ bao gồm 2 phần chính là:</p>
+            <ul>
+                <li><strong>Map của cuốc xe:</strong> Thể hiện các điểm khách bắt xe từ đâu đến tới ICOOL, vẽ bán kính 3km xung quanh các chi nhánh của ICOOL để thấy được dễ dàng những phạm vi ngoài bán kính có nhiều không
+                => Xem xét để BGD đưa ra quyết định mở địa điểm mới.</li>
+                <li><strong>Lưu ý:</strong> Map cuốc xe hiện tại gồm 2 phần là khách tới ICOOL và từ ICOOL về.</li>
+                <li><strong>Kết luận:</strong> Đưa những kết luận tóm gọn từng tháng và recommend địa điểm theo thuật toán K-MEANS CLUSTERING trong mô hình máy học.</li>
+            </ul>
+            <p>Bản đồ các chi nhánh ICOOL:</p>
+            <iframe src="my_map_icool.html" width="150%" height="100%"></iframe>
+        </div>
+
+        <div id="cuoc-xe-toi-ICOOL" class="section">
+            <h2>BIỂU ĐỒ CHI TIẾT VỊ TRÍ CUỐC XE KHÁCH TỚI ICOOL</h2>
+            <p><strong>1. Biểu đồ chi tiết tọa độ cuốc xe:</strong></p>
+            <p>🕵️‍♀️ Có thể tương tác với hình dễ dàng, chọn các khung thời gian phù hợp vào nhu cầu.</p>
+            <iframe src="map_total_come.html" width="150%" height="120%"></iframe>
+            <p><strong>🔍 NHẬN XÉT</strong></p>
+            <p>Tháng 1 và 2 năm 2025, các điểm chủ yếu nằm ngoài bán kính 3km là Quận 9 (gần Đ. Nguyễn Xiển), Quận 2 (Bình Trưng Tây),
+            Quận 7 (gần Đ. Nguyễn Văn Linh, Huỳnh Tấn Phát), Quận Tân Phú (Đ. Tây Thạnh), Hóc Môn (Đ. Lê Quang Đạo), 
+            Gò Vấp (Đ. Nguyễn Oanh, Nguyễn Văn Lượng), TP.Thủ Đức: Hiệp Bình Chánh (Đ. Phạm Văn Đồng), 
+            Hiệp Bình Phước (Đ. Quốc Lộ 13), Tỉnh Bình Dương (Dĩ An)</p>
+            <p><strong>2. Biểu độ phân cụm và đề xuất địa điểm:</strong></p>
+            <p>🕵️‍♀️ Có thể tương tác với hình dễ dàng, chọn các khung thời gian phù hợp vào nhu cầu.</p>
+            <iframe src="map_clusters_come_1.html" width="150%" height="120%"></iframe>
+            <p><strong>🎯 KẾT LUẬN CUỐI CÙNG </strong></p>
+            <p>7 cụm ở tp.HCM máy học đề xuất:</p>
+        <table border="1">
+            <tr>
+                <th>Quận/Huyện</th>
+                <th>Điểm tối ưu</th>
+            </tr>
+            <tr>
+                <td>Quận 9</td>
+                <td>Gần Đ.Nguyễn Xiển</td>
+            </tr>
+            <tr>
+                <td>Quận 2</td>
+                <td>Đ. Nguyễn Duy Trinh (Bình Trưng Đông)</td>
+            </tr>
+            <tr>
+                <td>Quận 4 và quận 7</td>
+                <td>Gần Đ. Trần Xuân Soạn</td>
+            </tr>
+            <tr>
+                <td>Quận 6</td>
+                <td>Đ. An Dương Vương giao Đ.Lý Chiêu Hoàng</td>
+            </tr>
+            <tr>
+                <td>Hóc Môn</td>
+                <td>Đ. Lê Quang Đạo</td>
+            </tr>
+            <tr>
+                <td>Quận Tân Bình</td>
+                <td>Sân bay Tân Sơn Nhất</td>
+            </tr>
+            <tr>
+                <td>TP. Thủ Đức</td>
+                <td>Đ. Phạm Văn Đồng (giữa Hiệp Bình Phước và Hiệp Bình Chánh)</td>
+            </tr>
+        </table>
+            <p><strong>Phân cụm gắn thêm tọa độ chi nhánh hiện có:</strong></p>
+            <iframe src="map_clusters_come_2.html" width="150%" height="120%"></iframe>
+        </div>
+        <div id="cuoc-xe-tu-ICOOL-ve" class="section">
+            <h2>BIỂU ĐỒ CHI TIẾT VỊ TRÍ CUỐC XE KHÁCH TỪ ICOOL VỀ</h2>
+            <p><strong>1. Biểu đồ chi tiết tọa độ cuốc xe:</strong></p>
+            <p>🕵️‍♀️ Có thể tương tác với hình dễ dàng, chọn các khung hời gian phù hợp vào nhu cầu.</p>
+            <iframe src="map_total_go.html" width="150%" height="120%"></iframe>
+            <p><strong>🔍 NHẬN XÉT</strong></p>
+            <p>Địa điểm những lượt từ ICOOL về nhà khách nhiều hơn đáng kể. Đây chủ yếu là nơi ở của khách.
+            Trong tháng 1 và 2 năm 2025, rất nhiều địa điểm nằm ngoài bán kính 3km so với chi nhánh.</p>
+            <p><strong>2. Biểu độ phân cụm và đề xuất địa điểm:</strong></p>
+            <p>🕵️‍♀️ Có thể tương tác với hình dễ dàng, chọn các khung thời gian phù hợp vào nhu cầu.</p>
+            <iframe src="map_clusters_go_1.html" width="150%" height="120%"></iframe>
+            <p><strong>🎯 KẾT LUẬN CUỐI CÙNG </strong></p>
+            <p>7 cụm ở tp.HCM máy học đề xuất(những điểm chủ yếu là nhà khách):</p>
+        <table border="1">
+            <tr>
+                <th>Quận/Huyện</th>
+                <th>Điểm tối ưu</th>
+            </tr>
+            <tr>
+                <td>Quận 9</td>
+                <td>Gần Đ.Hoàng Hữu Nam giao Nguyễn Văn Tăng</td>
+            </tr>
+            <tr>
+                <td>Quận 2</td>
+                <td>Đ. Nguyễn Duy Trinh</td>
+            </tr>
+            <tr>
+                <td>Quận 7 và 4</td>
+                <td>Gần Rạch Bần Đôn</td>
+            </tr>
+            <tr>
+                <td>Quận 6 và Bình Tân</td>
+                <td>Đ. Kinh Dương Vương</td>
+            </tr>
+            <tr>
+                <td>Tân Phú</td>
+                <td>Đ. Tây Thạnh</td>
+            </tr>
+            <tr>
+                <td>Gò Vấp</td>
+                <td>Đ. Phan Văn Trị</td>
+            </tr>
+            <tr>
+                <td>TP Thủ Đức, Bình Dương</td>
+                <td>Hiệp Bình Phước, Hiệp Bình Chánh, Dĩ An (gần Đ. U Ghẹ)</td>
+            </tr>
+        </table>
+            <p><strong>Phân cụm gắn thêm tọa độ chi nhánh hiện có:</strong></p>
+            <iframe src="map_clusters_go_2.html" width="150%" height="120%"></iframe>
+        </div>
+        <script>
+            function showSection(id) {
+                // Ẩn tất cả các phần
+                var sections = document.querySelectorAll('.section');
+                sections.forEach(function(section) {
+                    section.classList.remove('active');
+                });
+
+                // Hiển thị phần được chọn
+                var selectedSection = document.getElementById(id);
+                if (selectedSection) {
+                    selectedSection.classList.add('active');
+                }
+            }
+
+            // Hiển thị phần đầu tiên khi tải trang
+            document.addEventListener("DOMContentLoaded", function() {
+                showSection('tong-quan');
+            });
+        </script>
+
+    </body>
+
+    </html>
+    

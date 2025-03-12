@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_29fedc3304414532eabddd60a5524ba5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed;
+                bottom: 10px; right: 10px; width: 120px; height: auto;
+                background-color: white; border:3px solid grey; z-index:9999; font-size:14px;
+                padding: 10px;">
+    <b>Chú thích</b><br>
+<i style="background:red; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Trung tâm 1<br><i style="background:blue; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Trung tâm 2<br><i style="background:green; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Trung tâm 3<br><i style="background:orange; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Trung tâm 4<br><i style="background:purple; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Nam<br><i style="background:darkblue; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Bắc<br><i style="background:cadetblue; width: 12px; height: 12px; float: left; margin-right: 5px; border-radius: 50%;"></i> Tây<br></div>
+    
+    <h3 align="center" style="font-size:20px; color: black; font-weight: bold;">
+        CÁC CHI NHÁNH ICOOL KARAOKE
+    </h3>
+    
+            <div class="folium-map" id="map_29fedc3304414532eabddd60a5524ba5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_29fedc3304414532eabddd60a5524ba5 = L.map(
+                "map_29fedc3304414532eabddd60a5524ba5",
+                {
+                    center: [10.767234260869563, 106.7079454347826],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "zoomStarrt": 12,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6099587553bbc348cc03d389ac1c75ec = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6099587553bbc348cc03d389ac1c75ec.addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var marker_10b909792dfc24d2bb151a1823741052 = L.marker(
+                [10.8073, 106.718],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_b1a0fb8237d96a410f60edee2fef1710 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89efd1adf834057eaa8180f0c52ccffa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad3a8bdcfa225fc5e7b2c4a2e8aea54b = $(`<div id="html_ad3a8bdcfa225fc5e7b2c4a2e8aea54b" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Ung Văn Khiêm<br><b>Địa chỉ:</b> KARAOKE ICOOL 122 UNG VĂN KHIÊM PHƯỜNG 25 QUẬN BÌNH THẠNH</div>`)[0];
+                popup_89efd1adf834057eaa8180f0c52ccffa.setContent(html_ad3a8bdcfa225fc5e7b2c4a2e8aea54b);
+            
+        
+
+        marker_10b909792dfc24d2bb151a1823741052.bindPopup(popup_89efd1adf834057eaa8180f0c52ccffa)
+        ;
+
+        
+    
+    
+                marker_10b909792dfc24d2bb151a1823741052.setIcon(icon_b1a0fb8237d96a410f60edee2fef1710);
+            
+    
+            var marker_c12d50bd627e0b8b88b0841fbb1d5264 = L.marker(
+                [10.8126, 106.715],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_c66bcb25f9d17a8bc43e146f34fe4b2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62b02d1a29ef995957c432e178fe3837 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f5824f9d36af2d92c518c322701f77c = $(`<div id="html_7f5824f9d36af2d92c518c322701f77c" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Xô Viết Nghệ Tĩnh<br><b>Địa chỉ:</b> 693 XÔ VIẾT NGHỆ TĨNH , PHƯỜNG 26, QUẬN BÌNH THẠNH</div>`)[0];
+                popup_62b02d1a29ef995957c432e178fe3837.setContent(html_7f5824f9d36af2d92c518c322701f77c);
+            
+        
+
+        marker_c12d50bd627e0b8b88b0841fbb1d5264.bindPopup(popup_62b02d1a29ef995957c432e178fe3837)
+        ;
+
+        
+    
+    
+                marker_c12d50bd627e0b8b88b0841fbb1d5264.setIcon(icon_c66bcb25f9d17a8bc43e146f34fe4b2d);
+            
+    
+            var marker_0c2d89c78a2371ae20a068d24f1c2f1b = L.marker(
+                [10.8502, 106.632],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_9099b852e9633bf24fa2f976a32ab778 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ecfc078c2b3a5132c5ae6132ebb18ff4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8154a55492c954793629418ee80eb482 = $(`<div id="html_8154a55492c954793629418ee80eb482" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Tô Ký<br><b>Địa chỉ:</b> B74 BIS, TÔ KÝ, ĐÔNG HƯNG THUẬN, QUẬN 12</div>`)[0];
+                popup_ecfc078c2b3a5132c5ae6132ebb18ff4.setContent(html_8154a55492c954793629418ee80eb482);
+            
+        
+
+        marker_0c2d89c78a2371ae20a068d24f1c2f1b.bindPopup(popup_ecfc078c2b3a5132c5ae6132ebb18ff4)
+        ;
+
+        
+    
+    
+                marker_0c2d89c78a2371ae20a068d24f1c2f1b.setIcon(icon_9099b852e9633bf24fa2f976a32ab778);
+            
+    
+            var marker_5c570a84c39e34942a5f318a7460fc2f = L.marker(
+                [10.7406, 106.629],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_a867b08cc02a92ceecdd97cb6ec0b42b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf9e8167aff047f6acc93c27e7fd88ea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8882a5bb4295474b27aec4f20af0c7ed = $(`<div id="html_8882a5bb4295474b27aec4f20af0c7ed" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Bình Phú<br><b>Địa chỉ:</b> 31 BÌNH PHÚ, PHƯỜNG 10, QUẬN 6</div>`)[0];
+                popup_bf9e8167aff047f6acc93c27e7fd88ea.setContent(html_8882a5bb4295474b27aec4f20af0c7ed);
+            
+        
+
+        marker_5c570a84c39e34942a5f318a7460fc2f.bindPopup(popup_bf9e8167aff047f6acc93c27e7fd88ea)
+        ;
+
+        
+    
+    
+                marker_5c570a84c39e34942a5f318a7460fc2f.setIcon(icon_a867b08cc02a92ceecdd97cb6ec0b42b);
+            
+    
+            var marker_d86733ebed8e6d688717174ec7eb1b75 = L.marker(
+                [10.7423, 106.688],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_b2cce6048e9afc51d50e109ce5c5d86a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b90d7a881a946cca5173ea2b04891ddd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a5c361aee9a6a1e27855d1805ec7836a = $(`<div id="html_a5c361aee9a6a1e27855d1805ec7836a" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Dương Bá Trạc<br><b>Địa chỉ:</b> 456 DƯƠNG BÁ TRẠC, PHƯỜNG 2, QUẬN 8</div>`)[0];
+                popup_b90d7a881a946cca5173ea2b04891ddd.setContent(html_a5c361aee9a6a1e27855d1805ec7836a);
+            
+        
+
+        marker_d86733ebed8e6d688717174ec7eb1b75.bindPopup(popup_b90d7a881a946cca5173ea2b04891ddd)
+        ;
+
+        
+    
+    
+                marker_d86733ebed8e6d688717174ec7eb1b75.setIcon(icon_b2cce6048e9afc51d50e109ce5c5d86a);
+            
+    
+            var marker_c86dff44836973009e1cb32aeb8e6e8a = L.marker(
+                [10.7816, 106.633],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_df895a0d4c04c9661f03491f0b3ff9c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c2db954c4f4b92febac8840b5b26eac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_237a190f13e32e3bcb2926174269afd1 = $(`<div id="html_237a190f13e32e3bcb2926174269afd1" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Nguyễn Sơn<br><b>Địa chỉ:</b> 38 NGUYỄN SƠN PHƯỜNG PHÚ THỌ HÒA, QUẬN TÂN PHÚ</div>`)[0];
+                popup_2c2db954c4f4b92febac8840b5b26eac.setContent(html_237a190f13e32e3bcb2926174269afd1);
+            
+        
+
+        marker_c86dff44836973009e1cb32aeb8e6e8a.bindPopup(popup_2c2db954c4f4b92febac8840b5b26eac)
+        ;
+
+        
+    
+    
+                marker_c86dff44836973009e1cb32aeb8e6e8a.setIcon(icon_df895a0d4c04c9661f03491f0b3ff9c0);
+            
+    
+            var marker_923f9c2cf1f85511c29340d19f587a1e = L.marker(
+                [10.7748, 106.664],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_70ebe3636bd7ca5cd65aee0d80bb78a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a02d5ec2259760ef768cda2dc8a19e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2f3e79e49d715a8e0f4fa7d7682fc66d = $(`<div id="html_2f3e79e49d715a8e0f4fa7d7682fc66d" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Thành Thái<br><b>Địa chỉ:</b> 120 THÀNH THÁI PHƯỜNG 12 QUẬN 10</div>`)[0];
+                popup_4a02d5ec2259760ef768cda2dc8a19e6.setContent(html_2f3e79e49d715a8e0f4fa7d7682fc66d);
+            
+        
+
+        marker_923f9c2cf1f85511c29340d19f587a1e.bindPopup(popup_4a02d5ec2259760ef768cda2dc8a19e6)
+        ;
+
+        
+    
+    
+                marker_923f9c2cf1f85511c29340d19f587a1e.setIcon(icon_70ebe3636bd7ca5cd65aee0d80bb78a2);
+            
+    
+            var marker_f9e10230b73261466f4cf3ae4ecd3892 = L.marker(
+                [10.7885, 106.696],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_b6b2fd930fd4eae7fcb6e1df7cac19ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_53c5508949eccbe47ee8e4612a260d4c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3fa065b87d6099bf73f217abb4b7c12 = $(`<div id="html_e3fa065b87d6099bf73f217abb4b7c12" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Mạc Đỉnh Chi<br><b>Địa chỉ:</b> 90 MẠC ĐỈNH CHI PHƯỜNG ĐA KAO QUẬN 1</div>`)[0];
+                popup_53c5508949eccbe47ee8e4612a260d4c.setContent(html_e3fa065b87d6099bf73f217abb4b7c12);
+            
+        
+
+        marker_f9e10230b73261466f4cf3ae4ecd3892.bindPopup(popup_53c5508949eccbe47ee8e4612a260d4c)
+        ;
+
+        
+    
+    
+                marker_f9e10230b73261466f4cf3ae4ecd3892.setIcon(icon_b6b2fd930fd4eae7fcb6e1df7cac19ff);
+            
+    
+            var marker_ba87922be7779f1663ec488db0477938 = L.marker(
+                [10.7588, 106.681],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_591fe5b1345f39ed3ba819b3cc584096 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce9f5b9ca1d8cb7505da9f1a6dac7dc1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e63cbca49c4d08ef8414bec9513af26 = $(`<div id="html_2e63cbca49c4d08ef8414bec9513af26" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Trần Bình Trọng<br><b>Địa chỉ:</b> 177 TRẦN BÌNH TRỌNG PHƯỜNG 3 QUẬN 5</div>`)[0];
+                popup_ce9f5b9ca1d8cb7505da9f1a6dac7dc1.setContent(html_2e63cbca49c4d08ef8414bec9513af26);
+            
+        
+
+        marker_ba87922be7779f1663ec488db0477938.bindPopup(popup_ce9f5b9ca1d8cb7505da9f1a6dac7dc1)
+        ;
+
+        
+    
+    
+                marker_ba87922be7779f1663ec488db0477938.setIcon(icon_591fe5b1345f39ed3ba819b3cc584096);
+            
+    
+            var marker_8b03ca25acf86e0f9ef7cf281c1ec7cb = L.marker(
+                [10.7484, 106.684],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_2d231c2557101023ed1ea8600278f8ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d92466563b880a8b8b47edf4887edfff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7de8c39fb6e5137a5cedf6011b7170cd = $(`<div id="html_7de8c39fb6e5137a5cedf6011b7170cd" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Cầu Chữ Y<br><b>Địa chỉ:</b> 147 DẠ NAM PHƯỜNG 3, QUẬN 8</div>`)[0];
+                popup_d92466563b880a8b8b47edf4887edfff.setContent(html_7de8c39fb6e5137a5cedf6011b7170cd);
+            
+        
+
+        marker_8b03ca25acf86e0f9ef7cf281c1ec7cb.bindPopup(popup_d92466563b880a8b8b47edf4887edfff)
+        ;
+
+        
+    
+    
+                marker_8b03ca25acf86e0f9ef7cf281c1ec7cb.setIcon(icon_2d231c2557101023ed1ea8600278f8ab);
+            
+    
+            var marker_5fd51f138b5dec7ef5daa3f21d8da941 = L.marker(
+                [10.735, 106.656],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_c4ceaf465d27335ec0e1b7e0a24f19d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13cea1fcacdb1631ede847e4b8fbd454 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d638c56f2daa7fa30d068258a8666071 = $(`<div id="html_d638c56f2daa7fa30d068258a8666071" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Nhị Thiên Đường<br><b>Địa chỉ:</b> 260 QUỐC LỘ 50 PHƯỜNG 6 QUẬN 8</div>`)[0];
+                popup_13cea1fcacdb1631ede847e4b8fbd454.setContent(html_d638c56f2daa7fa30d068258a8666071);
+            
+        
+
+        marker_5fd51f138b5dec7ef5daa3f21d8da941.bindPopup(popup_13cea1fcacdb1631ede847e4b8fbd454)
+        ;
+
+        
+    
+    
+                marker_5fd51f138b5dec7ef5daa3f21d8da941.setIcon(icon_c4ceaf465d27335ec0e1b7e0a24f19d8);
+            
+    
+            var marker_481786434dae55025684b63624cf5bea = L.marker(
+                [10.7549, 106.668],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_098155907745571295c61c17abb5e6c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c202da23eefa56c6ed9110843dc96641 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ccea71f0916dd3d0749b411ccc3c77bc = $(`<div id="html_ccea71f0916dd3d0749b411ccc3c77bc" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Nguyễn Trãi<br><b>Địa chỉ:</b> 878 NGUYỄN TRÃI PHƯỜNG 14 QUẬN 5</div>`)[0];
+                popup_c202da23eefa56c6ed9110843dc96641.setContent(html_ccea71f0916dd3d0749b411ccc3c77bc);
+            
+        
+
+        marker_481786434dae55025684b63624cf5bea.bindPopup(popup_c202da23eefa56c6ed9110843dc96641)
+        ;
+
+        
+    
+    
+                marker_481786434dae55025684b63624cf5bea.setIcon(icon_098155907745571295c61c17abb5e6c5);
+            
+    
+            var marker_809295261fee0c5db49306510763e73f = L.marker(
+                [10.7746, 106.689],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_ac1f5815b1f459ea8ce4deecd0f99149 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6cf0d61846784a91d17ab0c1144327cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f51ace68960ceb5a5b6a11459ff3042 = $(`<div id="html_1f51ace68960ceb5a5b6a11459ff3042" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Cách Mạng Tháng 8<br><b>Địa chỉ:</b> 129A CMT8 PHƯỜNG 5 QUẬN 3</div>`)[0];
+                popup_6cf0d61846784a91d17ab0c1144327cf.setContent(html_1f51ace68960ceb5a5b6a11459ff3042);
+            
+        
+
+        marker_809295261fee0c5db49306510763e73f.bindPopup(popup_6cf0d61846784a91d17ab0c1144327cf)
+        ;
+
+        
+    
+    
+                marker_809295261fee0c5db49306510763e73f.setIcon(icon_ac1f5815b1f459ea8ce4deecd0f99149);
+            
+    
+            var marker_ca60f0698abe576470cf7d4c4b55a5d9 = L.marker(
+                [10.7939, 106.731],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_dec6de3a6bf4a67f924dd6e6497529d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_352007f0b08163c316ea74f59ca01aa2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3893e20516c7b149362f17f9da1cdb0 = $(`<div id="html_d3893e20516c7b149362f17f9da1cdb0" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Trần Não<br><b>Địa chỉ:</b> 18 TRẦN NÃO PHƯỜNG BÌNH AN QUẬN 2</div>`)[0];
+                popup_352007f0b08163c316ea74f59ca01aa2.setContent(html_d3893e20516c7b149362f17f9da1cdb0);
+            
+        
+
+        marker_ca60f0698abe576470cf7d4c4b55a5d9.bindPopup(popup_352007f0b08163c316ea74f59ca01aa2)
+        ;
+
+        
+    
+    
+                marker_ca60f0698abe576470cf7d4c4b55a5d9.setIcon(icon_dec6de3a6bf4a67f924dd6e6497529d1);
+            
+    
+            var marker_c06a39d69ef49453be50696d4e9f4e16 = L.marker(
+                [10.7646, 106.668],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_9b4307a0af12d8eb753b11a91edabb4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f3fa52ef4649520849f60cc8a1d62e6b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d039bfb0f4bbfbc50d0dcb2869fc91f = $(`<div id="html_5d039bfb0f4bbfbc50d0dcb2869fc91f" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Nguyễn Tri Phương<br><b>Địa chỉ:</b> 465 NGUYỄN TRI PHƯƠNG PHƯỜNG 4 QUẬN 10</div>`)[0];
+                popup_f3fa52ef4649520849f60cc8a1d62e6b.setContent(html_5d039bfb0f4bbfbc50d0dcb2869fc91f);
+            
+        
+
+        marker_c06a39d69ef49453be50696d4e9f4e16.bindPopup(popup_f3fa52ef4649520849f60cc8a1d62e6b)
+        ;
+
+        
+    
+    
+                marker_c06a39d69ef49453be50696d4e9f4e16.setIcon(icon_9b4307a0af12d8eb753b11a91edabb4a);
+            
+    
+            var marker_7ac911b52ef93b9a3babc51a1e4382ee = L.marker(
+                [10.7923, 106.664],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_d3f69a29cea72c65ed514d03b5d0ba09 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6537a2984802934a499d60592ef4eb67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f5b60e2fdf1c5ece6ab6cd0f7333b7a6 = $(`<div id="html_f5b60e2fdf1c5ece6ab6cd0f7333b7a6" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Đồng Đen<br><b>Địa chỉ:</b> 124A ĐỒNG ĐEN PHƯỜNG 14 QUẬN TÂN BÌNH</div>`)[0];
+                popup_6537a2984802934a499d60592ef4eb67.setContent(html_f5b60e2fdf1c5ece6ab6cd0f7333b7a6);
+            
+        
+
+        marker_7ac911b52ef93b9a3babc51a1e4382ee.bindPopup(popup_6537a2984802934a499d60592ef4eb67)
+        ;
+
+        
+    
+    
+                marker_7ac911b52ef93b9a3babc51a1e4382ee.setIcon(icon_d3f69a29cea72c65ed514d03b5d0ba09);
+            
+    
+            var marker_1fc647c5aaec5039f872b6d3f4b6264d = L.marker(
+                [10.8045, 106.702],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_a04e4f637fe9ef10ec592836aafe5db4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e59bf87242fa542e1e281d1d8254516a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_320b6f75e980001bb901d315824cb978 = $(`<div id="html_320b6f75e980001bb901d315824cb978" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Phan Chu Trinh<br><b>Địa chỉ:</b> 39-41 PHAN CHU TRINH PHƯỜNG 14 QUẬN BÌNH THẠNH</div>`)[0];
+                popup_e59bf87242fa542e1e281d1d8254516a.setContent(html_320b6f75e980001bb901d315824cb978);
+            
+        
+
+        marker_1fc647c5aaec5039f872b6d3f4b6264d.bindPopup(popup_e59bf87242fa542e1e281d1d8254516a)
+        ;
+
+        
+    
+    
+                marker_1fc647c5aaec5039f872b6d3f4b6264d.setIcon(icon_a04e4f637fe9ef10ec592836aafe5db4);
+            
+    
+            var marker_53bdd10331ecd2784190c6ae399eb6dd = L.marker(
+                [10.817288, 106.769745],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_6eccb15af0652eb1206642bdc1b5f516 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e38c9f3a5901db6337fab5448817c95c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10c8ef89fa57658f04f3663f772cf145 = $(`<div id="html_10c8ef89fa57658f04f3663f772cf145" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Đại Lộ 2<br><b>Địa chỉ:</b> 168 ĐẠI LỘ 2 PHƯỜNG PHƯỚC BÌNH, TP THỦ ĐỨC</div>`)[0];
+                popup_e38c9f3a5901db6337fab5448817c95c.setContent(html_10c8ef89fa57658f04f3663f772cf145);
+            
+        
+
+        marker_53bdd10331ecd2784190c6ae399eb6dd.bindPopup(popup_e38c9f3a5901db6337fab5448817c95c)
+        ;
+
+        
+    
+    
+                marker_53bdd10331ecd2784190c6ae399eb6dd.setIcon(icon_6eccb15af0652eb1206642bdc1b5f516);
+            
+    
+            var marker_b3e25633539a01a2f2bf78e4efebd4b0 = L.marker(
+                [10.3371, 107.086],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_c17f7672fc1ff935b76c4cb63fb7f191 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4648d963c6d8b9b5ad3e9721c6eab6c0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fce491a3030f662196e64077f0643fb1 = $(`<div id="html_fce491a3030f662196e64077f0643fb1" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Vũng Tàu<br><b>Địa chỉ:</b> 130 HOÀNG HOA THÁM P2, TP VŨNG TÀU</div>`)[0];
+                popup_4648d963c6d8b9b5ad3e9721c6eab6c0.setContent(html_fce491a3030f662196e64077f0643fb1);
+            
+        
+
+        marker_b3e25633539a01a2f2bf78e4efebd4b0.bindPopup(popup_4648d963c6d8b9b5ad3e9721c6eab6c0)
+        ;
+
+        
+    
+    
+                marker_b3e25633539a01a2f2bf78e4efebd4b0.setIcon(icon_c17f7672fc1ff935b76c4cb63fb7f191);
+            
+    
+            var marker_c4646f5ec7e07eb0a6e38d5433411b1b = L.marker(
+                [10.7701, 106.671],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_120611064da48de7b3c37cadff4ce198 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af510ccc29e7f6841f38fa579bbd474c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd9c2fd9a8bc3849c32c2263fcdfd367 = $(`<div id="html_dd9c2fd9a8bc3849c32c2263fcdfd367" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Sư Vạn Hạnh<br><b>Địa chỉ:</b> 644 Đ. SƯ VẠN HẠNH, PHƯỜNG 12, QUẬN 10.</div>`)[0];
+                popup_af510ccc29e7f6841f38fa579bbd474c.setContent(html_dd9c2fd9a8bc3849c32c2263fcdfd367);
+            
+        
+
+        marker_c4646f5ec7e07eb0a6e38d5433411b1b.bindPopup(popup_af510ccc29e7f6841f38fa579bbd474c)
+        ;
+
+        
+    
+    
+                marker_c4646f5ec7e07eb0a6e38d5433411b1b.setIcon(icon_120611064da48de7b3c37cadff4ce198);
+            
+    
+            var marker_911dd71693dce7050bc9e66d4de9e8ad = L.marker(
+                [10.7974, 106.691],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_8ce397f16f22b05b14ba38a92fef53f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_887619eb8c7a98652c8dedd842baf6be = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89bb0f5b335ac1310cc5d1c401e911c3 = $(`<div id="html_89bb0f5b335ac1310cc5d1c401e911c3" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Phan Xích Long<br><b>Địa chỉ:</b> 266-268-270 PHAN XÍCH LONG PHƯỜNG 7 QUẬN PHÚ NHUẬN</div>`)[0];
+                popup_887619eb8c7a98652c8dedd842baf6be.setContent(html_89bb0f5b335ac1310cc5d1c401e911c3);
+            
+        
+
+        marker_911dd71693dce7050bc9e66d4de9e8ad.bindPopup(popup_887619eb8c7a98652c8dedd842baf6be)
+        ;
+
+        
+    
+    
+                marker_911dd71693dce7050bc9e66d4de9e8ad.setIcon(icon_8ce397f16f22b05b14ba38a92fef53f4);
+            
+    
+            var marker_b35dc605e2364b17b8fc24509eabe262 = L.marker(
+                [10.8458, 106.78],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_178620034c710279b74f62e69cdd23d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b9f3c781ab808b7a4c46901d956c2264 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43336f2411c20e12d908234f7613f1b4 = $(`<div id="html_43336f2411c20e12d908234f7613f1b4" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Lê Văn Việt<br><b>Địa chỉ:</b> 140 LÊ VĂN VIỆT PHƯỜNG HIỆP PHÚ THỦ ĐỨC</div>`)[0];
+                popup_b9f3c781ab808b7a4c46901d956c2264.setContent(html_43336f2411c20e12d908234f7613f1b4);
+            
+        
+
+        marker_b35dc605e2364b17b8fc24509eabe262.bindPopup(popup_b9f3c781ab808b7a4c46901d956c2264)
+        ;
+
+        
+    
+    
+                marker_b35dc605e2364b17b8fc24509eabe262.setIcon(icon_178620034c710279b74f62e69cdd23d8);
+            
+    
+            var marker_0a4777092a37af68e8e995261e825d6f = L.marker(
+                [10.8538, 106.767],
+                {
+}
+            ).addTo(map_29fedc3304414532eabddd60a5524ba5);
+        
+    
+            var icon_473f81f101534f6f5eb2d76fc1dc511e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_972a401f2910be25751acf334db64ce2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99733a144f7fcefe8b1d4d5ded2460a1 = $(`<div id="html_99733a144f7fcefe8b1d4d5ded2460a1" style="width: 100.0%; height: 100.0%;"><b>Chi nhánh:</b> Hoàng Diệu 2<br><b>Địa chỉ:</b> 66G Hoàng Diệu 2, Phường Linh Chiểu, TP Thủ Đức</div>`)[0];
+                popup_972a401f2910be25751acf334db64ce2.setContent(html_99733a144f7fcefe8b1d4d5ded2460a1);
+            
+        
+
+        marker_0a4777092a37af68e8e995261e825d6f.bindPopup(popup_972a401f2910be25751acf334db64ce2)
+        ;
+
+        
+    
+    
+                marker_0a4777092a37af68e8e995261e825d6f.setIcon(icon_473f81f101534f6f5eb2d76fc1dc511e);
+            
+</script>
+</html>
