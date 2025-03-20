@@ -1,0 +1,3655 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce34491cc64b95e4a932f152ed6d98da {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed;
+                top: 80px; left: 10px; width: 120px; height: 40px;
+                z-index: 1000;">
+        <button onclick="clearLayers()"
+                style="width:100%; height:100%; background-color: red; color: white; border: none;
+                border-radius: 8px; font-size:14px; font-weight: bold; cursor: pointer; box-shadow: 2px 2px 5px grey;">
+            🗑️ Xóa tất cả
+        </button>
+    </div>
+    <script>
+        function clearLayers() {
+            var checkboxes = document.querySelectorAll('.leaflet-control-layers-selector');
+            checkboxes.forEach(function(cb) {
+                if (cb.checked) cb.click();
+            });
+        }
+    </script>
+    
+    
+            <div class="folium-map" id="map_ce34491cc64b95e4a932f152ed6d98da" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ce34491cc64b95e4a932f152ed6d98da = L.map(
+                "map_ce34491cc64b95e4a932f152ed6d98da",
+                {
+                    center: [10.7625, 106.6297],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eaf32d0fed555461070785b136ac8b7e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eaf32d0fed555461070785b136ac8b7e.addTo(map_ce34491cc64b95e4a932f152ed6d98da);
+        
+    
+            var feature_group_d3ec33bb305d5798d913087f9c56716b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_48911fe76a71662c790d2fc20447aa09 = L.circleMarker(
+                [10.8462234, 106.6546158],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ca0e376feb40ce6f7dbb5adbb3603e27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42a98d978561af235965c306c1ab8a3a = $(`<div id="html_42a98d978561af235965c306c1ab8a3a" style="width: 100.0%; height: 100.0%;">220 Đ. Nguyễn Văn Khối - 1 lần</div>`)[0];
+                popup_ca0e376feb40ce6f7dbb5adbb3603e27.setContent(html_42a98d978561af235965c306c1ab8a3a);
+            
+        
+
+        circle_marker_48911fe76a71662c790d2fc20447aa09.bindPopup(popup_ca0e376feb40ce6f7dbb5adbb3603e27)
+        ;
+
+        
+    
+    
+            var circle_marker_780e11a3c868eb6c00fc48c0574860b2 = L.circleMarker(
+                [10.7677961, 106.6268639],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_c2616bf1f6d86ad98507220c32116fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfbd94a396f391a38c419b100264e282 = $(`<div id="html_bfbd94a396f391a38c419b100264e282" style="width: 100.0%; height: 100.0%;">Hoa Mai Quán - 1 lần</div>`)[0];
+                popup_c2616bf1f6d86ad98507220c32116fc2.setContent(html_bfbd94a396f391a38c419b100264e282);
+            
+        
+
+        circle_marker_780e11a3c868eb6c00fc48c0574860b2.bindPopup(popup_c2616bf1f6d86ad98507220c32116fc2)
+        ;
+
+        
+    
+    
+            var circle_marker_6d6c14eef1ec252f627cb9ae9e792f65 = L.circleMarker(
+                [10.8478317, 106.6630143],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_cb37614038fe06547292a858e02e5e9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e45b32e5f54e21f8de25df63b29db93a = $(`<div id="html_e45b32e5f54e21f8de25df63b29db93a" style="width: 100.0%; height: 100.0%;">Quán Ăn Gà Rán Nóng - 1 lần</div>`)[0];
+                popup_cb37614038fe06547292a858e02e5e9e.setContent(html_e45b32e5f54e21f8de25df63b29db93a);
+            
+        
+
+        circle_marker_6d6c14eef1ec252f627cb9ae9e792f65.bindPopup(popup_cb37614038fe06547292a858e02e5e9e)
+        ;
+
+        
+    
+    
+            var circle_marker_94b4bdc50da1fd19d280ca2057edb226 = L.circleMarker(
+                [10.7725158, 106.6273553],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_af4da517a2059c876632c689ff19e58a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2dd1b949906f01dea7ab14c45f8f67b = $(`<div id="html_e2dd1b949906f01dea7ab14c45f8f67b" style="width: 100.0%; height: 100.0%;">Tiệm Cầm Đồ Đức Trọng - 2 lần</div>`)[0];
+                popup_af4da517a2059c876632c689ff19e58a.setContent(html_e2dd1b949906f01dea7ab14c45f8f67b);
+            
+        
+
+        circle_marker_94b4bdc50da1fd19d280ca2057edb226.bindPopup(popup_af4da517a2059c876632c689ff19e58a)
+        ;
+
+        
+    
+    
+            var circle_marker_51ad763d62fdbf74256e0a6eea40cb19 = L.circleMarker(
+                [10.7725158, 106.6273553],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_1e74ed5a14497eb70d8fd3b3bd6ff12c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4d64b9f5fc532e106056fb49cc0b08d = $(`<div id="html_e4d64b9f5fc532e106056fb49cc0b08d" style="width: 100.0%; height: 100.0%;">Tiệm Cầm Đồ Đức Trọng - 2 lần</div>`)[0];
+                popup_1e74ed5a14497eb70d8fd3b3bd6ff12c.setContent(html_e4d64b9f5fc532e106056fb49cc0b08d);
+            
+        
+
+        circle_marker_51ad763d62fdbf74256e0a6eea40cb19.bindPopup(popup_1e74ed5a14497eb70d8fd3b3bd6ff12c)
+        ;
+
+        
+    
+    
+            var circle_marker_ea5f6182dc9e2b7ca1e9c47479b1dcf6 = L.circleMarker(
+                [10.8741871, 106.5965462],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_6f37b3e41f1ac0babb04c75a4dff91b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d422ec0b0db6b4fc3f6e24642e639b9 = $(`<div id="html_0d422ec0b0db6b4fc3f6e24642e639b9" style="width: 100.0%; height: 100.0%;">thietkewebsite.online - 1 lần</div>`)[0];
+                popup_6f37b3e41f1ac0babb04c75a4dff91b2.setContent(html_0d422ec0b0db6b4fc3f6e24642e639b9);
+            
+        
+
+        circle_marker_ea5f6182dc9e2b7ca1e9c47479b1dcf6.bindPopup(popup_6f37b3e41f1ac0babb04c75a4dff91b2)
+        ;
+
+        
+    
+    
+            var circle_marker_dc967d05fe07a50330b1b5ac22c9c9a3 = L.circleMarker(
+                [10.84545631062588, 106.6776778192868],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_84bf2e13c076f92cfc7111e149ef53c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2090aced42c1340572e59f5b80dcd3b = $(`<div id="html_b2090aced42c1340572e59f5b80dcd3b" style="width: 100.0%; height: 100.0%;">405 Nguyễn Oanh - 1 lần</div>`)[0];
+                popup_84bf2e13c076f92cfc7111e149ef53c2.setContent(html_b2090aced42c1340572e59f5b80dcd3b);
+            
+        
+
+        circle_marker_dc967d05fe07a50330b1b5ac22c9c9a3.bindPopup(popup_84bf2e13c076f92cfc7111e149ef53c2)
+        ;
+
+        
+    
+    
+            var circle_marker_b2bd6a602862e0f8efd85b36baeb4795 = L.circleMarker(
+                [10.8668487, 106.6269191],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_1478cb7afc19816b74923a7dda0553da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a21c57351e082b6fa3c27cd33e6a087c = $(`<div id="html_a21c57351e082b6fa3c27cd33e6a087c" style="width: 100.0%; height: 100.0%;">Trần Thị Năm - 2 lần</div>`)[0];
+                popup_1478cb7afc19816b74923a7dda0553da.setContent(html_a21c57351e082b6fa3c27cd33e6a087c);
+            
+        
+
+        circle_marker_b2bd6a602862e0f8efd85b36baeb4795.bindPopup(popup_1478cb7afc19816b74923a7dda0553da)
+        ;
+
+        
+    
+    
+            var circle_marker_14085ad8985d9f208260caa7f29ed8eb = L.circleMarker(
+                [10.8668487, 106.6269191],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_0b88cbbb43f099bb8109dc0ed03086fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af1fc315cf31795dca035d0ff7aca9d5 = $(`<div id="html_af1fc315cf31795dca035d0ff7aca9d5" style="width: 100.0%; height: 100.0%;">Trần Thị Năm - 2 lần</div>`)[0];
+                popup_0b88cbbb43f099bb8109dc0ed03086fe.setContent(html_af1fc315cf31795dca035d0ff7aca9d5);
+            
+        
+
+        circle_marker_14085ad8985d9f208260caa7f29ed8eb.bindPopup(popup_0b88cbbb43f099bb8109dc0ed03086fe)
+        ;
+
+        
+    
+    
+            var circle_marker_f9e0cb5e1c7ab6e9f1b96c367669f7c5 = L.circleMarker(
+                [10.7886276, 106.625962],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_804e27fe133450b8fb63248a9652c87d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93608019846f1254a35bc404ff861274 = $(`<div id="html_93608019846f1254a35bc404ff861274" style="width: 100.0%; height: 100.0%;">Quán 296 - 2 lần</div>`)[0];
+                popup_804e27fe133450b8fb63248a9652c87d.setContent(html_93608019846f1254a35bc404ff861274);
+            
+        
+
+        circle_marker_f9e0cb5e1c7ab6e9f1b96c367669f7c5.bindPopup(popup_804e27fe133450b8fb63248a9652c87d)
+        ;
+
+        
+    
+    
+            var circle_marker_ea36f31f06605706e54ae682e5927725 = L.circleMarker(
+                [10.7886276, 106.625962],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_1984ea5b0a9915a8120ccb87ad780cfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04602fc34d050833da8f9ab69dd4a236 = $(`<div id="html_04602fc34d050833da8f9ab69dd4a236" style="width: 100.0%; height: 100.0%;">Quán 296 - 2 lần</div>`)[0];
+                popup_1984ea5b0a9915a8120ccb87ad780cfd.setContent(html_04602fc34d050833da8f9ab69dd4a236);
+            
+        
+
+        circle_marker_ea36f31f06605706e54ae682e5927725.bindPopup(popup_1984ea5b0a9915a8120ccb87ad780cfd)
+        ;
+
+        
+    
+    
+            var circle_marker_317eaf689ef0c4b5639bdd8b83176a6f = L.circleMarker(
+                [10.7705041, 106.6473179],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_90f266924c52a62c8c10c30b2bdddbc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9c3cfc2849899428cdb9cc9d5f2487d = $(`<div id="html_d9c3cfc2849899428cdb9cc9d5f2487d" style="width: 100.0%; height: 100.0%;">Công Ty TNHH Nhôm Đúc Minh Đức - 3 lần</div>`)[0];
+                popup_90f266924c52a62c8c10c30b2bdddbc2.setContent(html_d9c3cfc2849899428cdb9cc9d5f2487d);
+            
+        
+
+        circle_marker_317eaf689ef0c4b5639bdd8b83176a6f.bindPopup(popup_90f266924c52a62c8c10c30b2bdddbc2)
+        ;
+
+        
+    
+    
+            var circle_marker_1cb08e89509dad220468028f16a3ac4a = L.circleMarker(
+                [10.7705041, 106.6473179],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_78090578e49ea374a3d824ec9c605587 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20ae7a37fb8abad22cd0114a1342608a = $(`<div id="html_20ae7a37fb8abad22cd0114a1342608a" style="width: 100.0%; height: 100.0%;">Công Ty TNHH Nhôm Đúc Minh Đức - 3 lần</div>`)[0];
+                popup_78090578e49ea374a3d824ec9c605587.setContent(html_20ae7a37fb8abad22cd0114a1342608a);
+            
+        
+
+        circle_marker_1cb08e89509dad220468028f16a3ac4a.bindPopup(popup_78090578e49ea374a3d824ec9c605587)
+        ;
+
+        
+    
+    
+            var circle_marker_c650316f4e068c63dbd50edb703e11d3 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_eba2de80250a2339f578ad714f624f54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12efec83fc6aaba1c92735c3b3128917 = $(`<div id="html_12efec83fc6aaba1c92735c3b3128917" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_eba2de80250a2339f578ad714f624f54.setContent(html_12efec83fc6aaba1c92735c3b3128917);
+            
+        
+
+        circle_marker_c650316f4e068c63dbd50edb703e11d3.bindPopup(popup_eba2de80250a2339f578ad714f624f54)
+        ;
+
+        
+    
+    
+            var circle_marker_655d41230f7d31b4050a46a0a4f6e512 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_2b348079385ef9403f1ae263772c2123 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21d33440f4e304e159d274fa22528c21 = $(`<div id="html_21d33440f4e304e159d274fa22528c21" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_2b348079385ef9403f1ae263772c2123.setContent(html_21d33440f4e304e159d274fa22528c21);
+            
+        
+
+        circle_marker_655d41230f7d31b4050a46a0a4f6e512.bindPopup(popup_2b348079385ef9403f1ae263772c2123)
+        ;
+
+        
+    
+    
+            var circle_marker_3c601c7ecbc0431d7f5679196b6236a1 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_a639cd03fb8be9fdda0f36ba2a9a38c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_629e5e79a8bfd8132073d0ae7681cfc4 = $(`<div id="html_629e5e79a8bfd8132073d0ae7681cfc4" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_a639cd03fb8be9fdda0f36ba2a9a38c9.setContent(html_629e5e79a8bfd8132073d0ae7681cfc4);
+            
+        
+
+        circle_marker_3c601c7ecbc0431d7f5679196b6236a1.bindPopup(popup_a639cd03fb8be9fdda0f36ba2a9a38c9)
+        ;
+
+        
+    
+    
+            var circle_marker_3b2899aebfbcd1418915ee26eba9f2f9 = L.circleMarker(
+                [10.788002, 106.6351631],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_21f6d6566e786dff36c02aeffddfa97a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78b12c9812cea64e887a9ece399961aa = $(`<div id="html_78b12c9812cea64e887a9ece399961aa" style="width: 100.0%; height: 100.0%;">Quán Hoa Mai - bia đồng giá 18K - 4 lần</div>`)[0];
+                popup_21f6d6566e786dff36c02aeffddfa97a.setContent(html_78b12c9812cea64e887a9ece399961aa);
+            
+        
+
+        circle_marker_3b2899aebfbcd1418915ee26eba9f2f9.bindPopup(popup_21f6d6566e786dff36c02aeffddfa97a)
+        ;
+
+        
+    
+    
+            var circle_marker_ebc1f43caff909e3abe66111be61750d = L.circleMarker(
+                [10.788002, 106.6351631],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_4416e718be1de201788b6bfb5de60105 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ff32485a5b3346327c2a21146b5c0c6 = $(`<div id="html_0ff32485a5b3346327c2a21146b5c0c6" style="width: 100.0%; height: 100.0%;">Quán Hoa Mai - bia đồng giá 18K - 4 lần</div>`)[0];
+                popup_4416e718be1de201788b6bfb5de60105.setContent(html_0ff32485a5b3346327c2a21146b5c0c6);
+            
+        
+
+        circle_marker_ebc1f43caff909e3abe66111be61750d.bindPopup(popup_4416e718be1de201788b6bfb5de60105)
+        ;
+
+        
+    
+    
+            var circle_marker_3ad1ef6de999b2fdfa53b9dd937966f2 = L.circleMarker(
+                [10.774874, 106.644105],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ee32e803f453ec7fa8cb0f57c5d14a27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4204c2a2bd53c6283331456efd4de178 = $(`<div id="html_4204c2a2bd53c6283331456efd4de178" style="width: 100.0%; height: 100.0%;">Ốc Nhớ Sài Gòn - Trịnh Đình Trọng - 2 lần</div>`)[0];
+                popup_ee32e803f453ec7fa8cb0f57c5d14a27.setContent(html_4204c2a2bd53c6283331456efd4de178);
+            
+        
+
+        circle_marker_3ad1ef6de999b2fdfa53b9dd937966f2.bindPopup(popup_ee32e803f453ec7fa8cb0f57c5d14a27)
+        ;
+
+        
+    
+    
+            var circle_marker_547e0716726d3a2f7f7d3f6ad3610558 = L.circleMarker(
+                [10.788002, 106.6351631],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_6a6ac6cb4170d9ee7b4629acbda6f1fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6923d2815fc233ad9d34d5c7bf8c0067 = $(`<div id="html_6923d2815fc233ad9d34d5c7bf8c0067" style="width: 100.0%; height: 100.0%;">Quán Hoa Mai - bia đồng giá 18K - 4 lần</div>`)[0];
+                popup_6a6ac6cb4170d9ee7b4629acbda6f1fc.setContent(html_6923d2815fc233ad9d34d5c7bf8c0067);
+            
+        
+
+        circle_marker_547e0716726d3a2f7f7d3f6ad3610558.bindPopup(popup_6a6ac6cb4170d9ee7b4629acbda6f1fc)
+        ;
+
+        
+    
+    
+            var circle_marker_0ca982c13a6778bb9b181346c23e87f6 = L.circleMarker(
+                [10.788002, 106.6351631],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_fc0314a1be03d36911b5d70f40a52074 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b0e9402bab970349b3ff217c6387528 = $(`<div id="html_2b0e9402bab970349b3ff217c6387528" style="width: 100.0%; height: 100.0%;">Quán Hoa Mai - bia đồng giá 18K - 4 lần</div>`)[0];
+                popup_fc0314a1be03d36911b5d70f40a52074.setContent(html_2b0e9402bab970349b3ff217c6387528);
+            
+        
+
+        circle_marker_0ca982c13a6778bb9b181346c23e87f6.bindPopup(popup_fc0314a1be03d36911b5d70f40a52074)
+        ;
+
+        
+    
+    
+            var circle_marker_4d46e313e9e563b2e220f68e59018dc4 = L.circleMarker(
+                [10.774874, 106.644105],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_fba633bb572b9e38e10a6f82abf967a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7d6b8a15474deadef615879b025c70a = $(`<div id="html_b7d6b8a15474deadef615879b025c70a" style="width: 100.0%; height: 100.0%;">Ốc Nhớ Sài Gòn - Trịnh Đình Trọng - 2 lần</div>`)[0];
+                popup_fba633bb572b9e38e10a6f82abf967a9.setContent(html_b7d6b8a15474deadef615879b025c70a);
+            
+        
+
+        circle_marker_4d46e313e9e563b2e220f68e59018dc4.bindPopup(popup_fba633bb572b9e38e10a6f82abf967a9)
+        ;
+
+        
+    
+    
+            var circle_marker_10ddcbf3beb7f2c6dace7301a7ee0942 = L.circleMarker(
+                [10.781269, 106.632653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_92d4b8dab62be7524bd6e502f65f1381 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98852368288714d7333a3a492f9fab63 = $(`<div id="html_98852368288714d7333a3a492f9fab63" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_92d4b8dab62be7524bd6e502f65f1381.setContent(html_98852368288714d7333a3a492f9fab63);
+            
+        
+
+        circle_marker_10ddcbf3beb7f2c6dace7301a7ee0942.bindPopup(popup_92d4b8dab62be7524bd6e502f65f1381)
+        ;
+
+        
+    
+    
+            var circle_marker_b8c8f5df7c1e21bd6f9a07d529fe0166 = L.circleMarker(
+                [10.78605553, 106.6245362],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_43501a46cf578cc39b2f41454a3e3764 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a15adb174988454abe6de79f1918d357 = $(`<div id="html_a15adb174988454abe6de79f1918d357" style="width: 100.0%; height: 100.0%;">Cà phê hạt nguyên chất pha máy - 5 lần</div>`)[0];
+                popup_43501a46cf578cc39b2f41454a3e3764.setContent(html_a15adb174988454abe6de79f1918d357);
+            
+        
+
+        circle_marker_b8c8f5df7c1e21bd6f9a07d529fe0166.bindPopup(popup_43501a46cf578cc39b2f41454a3e3764)
+        ;
+
+        
+    
+    
+            var circle_marker_aa15c51d3b03ce55060c9396008153cb = L.circleMarker(
+                [10.78605553, 106.6245362],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_da7441f02183b874f5513f67cda84a78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5a79c616af860f6489007c4b3a32da4 = $(`<div id="html_b5a79c616af860f6489007c4b3a32da4" style="width: 100.0%; height: 100.0%;">Cà phê hạt nguyên chất pha máy - 5 lần</div>`)[0];
+                popup_da7441f02183b874f5513f67cda84a78.setContent(html_b5a79c616af860f6489007c4b3a32da4);
+            
+        
+
+        circle_marker_aa15c51d3b03ce55060c9396008153cb.bindPopup(popup_da7441f02183b874f5513f67cda84a78)
+        ;
+
+        
+    
+    
+            var circle_marker_15d1f4bf60f9908db4115d996f6f8567 = L.circleMarker(
+                [10.8512876, 106.64475],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_f83bc7c6ef39f321ca8c68d3a8d4a673 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e607dd2536b8c68be2e662c0388112d = $(`<div id="html_2e607dd2536b8c68be2e662c0388112d" style="width: 100.0%; height: 100.0%;">13 Đ. 53 - 1 lần</div>`)[0];
+                popup_f83bc7c6ef39f321ca8c68d3a8d4a673.setContent(html_2e607dd2536b8c68be2e662c0388112d);
+            
+        
+
+        circle_marker_15d1f4bf60f9908db4115d996f6f8567.bindPopup(popup_f83bc7c6ef39f321ca8c68d3a8d4a673)
+        ;
+
+        
+    
+    
+            var circle_marker_6efe227115724d66fa7d4e0fe49285aa = L.circleMarker(
+                [10.7880066, 106.6255224],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_248c1c95f9b0d17c077d8a89071f4067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0a652c5a57634d2ecf9fbaa84a20f53 = $(`<div id="html_a0a652c5a57634d2ecf9fbaa84a20f53" style="width: 100.0%; height: 100.0%;">Công Ty Tnhh Sx - Tm - Dv Dũng Hà - 1 lần</div>`)[0];
+                popup_248c1c95f9b0d17c077d8a89071f4067.setContent(html_a0a652c5a57634d2ecf9fbaa84a20f53);
+            
+        
+
+        circle_marker_6efe227115724d66fa7d4e0fe49285aa.bindPopup(popup_248c1c95f9b0d17c077d8a89071f4067)
+        ;
+
+        
+    
+    
+            var circle_marker_853e29c546d86879b2ccdabdb2f8a292 = L.circleMarker(
+                [10.785288, 106.6414703],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_11343c0f101583d9a146c6f99234a4b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c22b64894b00b7b2be4681e893e872d = $(`<div id="html_2c22b64894b00b7b2be4681e893e872d" style="width: 100.0%; height: 100.0%;">Nhà Hàng Tiệc Cưới Nam Bộ - 1 lần</div>`)[0];
+                popup_11343c0f101583d9a146c6f99234a4b1.setContent(html_2c22b64894b00b7b2be4681e893e872d);
+            
+        
+
+        circle_marker_853e29c546d86879b2ccdabdb2f8a292.bindPopup(popup_11343c0f101583d9a146c6f99234a4b1)
+        ;
+
+        
+    
+    
+            var circle_marker_4a0f26b96ecde6d72d09216820d5d9b4 = L.circleMarker(
+                [10.787041, 106.635076],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_361093d0aff8d92f8505bf6bb763859d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44a08dcd2cf53efb7b0e09ed85f29af4 = $(`<div id="html_44a08dcd2cf53efb7b0e09ed85f29af4" style="width: 100.0%; height: 100.0%;">Nhà Hàng Tuấn Mập - 3 lần</div>`)[0];
+                popup_361093d0aff8d92f8505bf6bb763859d.setContent(html_44a08dcd2cf53efb7b0e09ed85f29af4);
+            
+        
+
+        circle_marker_4a0f26b96ecde6d72d09216820d5d9b4.bindPopup(popup_361093d0aff8d92f8505bf6bb763859d)
+        ;
+
+        
+    
+    
+            var circle_marker_8ebaf6734fee784187bb22f07ebb9c3e = L.circleMarker(
+                [10.787041, 106.635076],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_65efde432603f3c7ff9e75f412489021 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b19fe3c8c9b7505d3eb3ac2c238fdbcb = $(`<div id="html_b19fe3c8c9b7505d3eb3ac2c238fdbcb" style="width: 100.0%; height: 100.0%;">Nhà Hàng Tuấn Mập - 3 lần</div>`)[0];
+                popup_65efde432603f3c7ff9e75f412489021.setContent(html_b19fe3c8c9b7505d3eb3ac2c238fdbcb);
+            
+        
+
+        circle_marker_8ebaf6734fee784187bb22f07ebb9c3e.bindPopup(popup_65efde432603f3c7ff9e75f412489021)
+        ;
+
+        
+    
+    
+            var circle_marker_1500269a63608c9ad9534f8debaa0daa = L.circleMarker(
+                [10.787041, 106.635076],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_bd6a8b686028c8bc8c45055323008561 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19bbfafef33bd892ef4484cc4f199ba6 = $(`<div id="html_19bbfafef33bd892ef4484cc4f199ba6" style="width: 100.0%; height: 100.0%;">Nhà Hàng Tuấn Mập - 3 lần</div>`)[0];
+                popup_bd6a8b686028c8bc8c45055323008561.setContent(html_19bbfafef33bd892ef4484cc4f199ba6);
+            
+        
+
+        circle_marker_1500269a63608c9ad9534f8debaa0daa.bindPopup(popup_bd6a8b686028c8bc8c45055323008561)
+        ;
+
+        
+    
+    
+            var circle_marker_5822d455183ee15a18b1349877411225 = L.circleMarker(
+                [10.78605553, 106.6245362],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_c1f3fbfc6a065f6d73f30e4936095af1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddc7cf59d850671d5ad97a9adbb3ef20 = $(`<div id="html_ddc7cf59d850671d5ad97a9adbb3ef20" style="width: 100.0%; height: 100.0%;">Cà phê hạt nguyên chất pha máy - 5 lần</div>`)[0];
+                popup_c1f3fbfc6a065f6d73f30e4936095af1.setContent(html_ddc7cf59d850671d5ad97a9adbb3ef20);
+            
+        
+
+        circle_marker_5822d455183ee15a18b1349877411225.bindPopup(popup_c1f3fbfc6a065f6d73f30e4936095af1)
+        ;
+
+        
+    
+    
+            var circle_marker_79339f9ddab1d01d26a11de6f6d977ca = L.circleMarker(
+                [10.78605553, 106.6245362],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ca1e9746e3405481b8f9f65519aa3236 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b976d17eb25622135dfa1407192d924 = $(`<div id="html_7b976d17eb25622135dfa1407192d924" style="width: 100.0%; height: 100.0%;">Cà phê hạt nguyên chất pha máy - 5 lần</div>`)[0];
+                popup_ca1e9746e3405481b8f9f65519aa3236.setContent(html_7b976d17eb25622135dfa1407192d924);
+            
+        
+
+        circle_marker_79339f9ddab1d01d26a11de6f6d977ca.bindPopup(popup_ca1e9746e3405481b8f9f65519aa3236)
+        ;
+
+        
+    
+    
+            var circle_marker_5ed0ac33581b9708dbe8cf576c5b64da = L.circleMarker(
+                [10.78605553, 106.6245362],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ab957872f94abeeec9163076bb7c257b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e03a2b22a50115483c4a4865473de025 = $(`<div id="html_e03a2b22a50115483c4a4865473de025" style="width: 100.0%; height: 100.0%;">Cà phê hạt nguyên chất pha máy - 5 lần</div>`)[0];
+                popup_ab957872f94abeeec9163076bb7c257b.setContent(html_e03a2b22a50115483c4a4865473de025);
+            
+        
+
+        circle_marker_5ed0ac33581b9708dbe8cf576c5b64da.bindPopup(popup_ab957872f94abeeec9163076bb7c257b)
+        ;
+
+        
+    
+    
+            var circle_marker_93d0a6cd90b6a27b2ae73b5a652b682f = L.circleMarker(
+                [10.781269, 106.632653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_f12c84125e17878c4fc96d9b52c113d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78def7a908e9069a47231854aac71c81 = $(`<div id="html_78def7a908e9069a47231854aac71c81" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_f12c84125e17878c4fc96d9b52c113d4.setContent(html_78def7a908e9069a47231854aac71c81);
+            
+        
+
+        circle_marker_93d0a6cd90b6a27b2ae73b5a652b682f.bindPopup(popup_f12c84125e17878c4fc96d9b52c113d4)
+        ;
+
+        
+    
+    
+            var circle_marker_809a41dc7af5f9fc1305051cde450353 = L.circleMarker(
+                [10.792767, 106.626982],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_43349369cb003f043ad1e379913a72ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92a3669d0cada6ecfc76e2c69517a19d = $(`<div id="html_92a3669d0cada6ecfc76e2c69517a19d" style="width: 100.0%; height: 100.0%;">Nhà hàng ẩm thực 66 - 2 lần</div>`)[0];
+                popup_43349369cb003f043ad1e379913a72ee.setContent(html_92a3669d0cada6ecfc76e2c69517a19d);
+            
+        
+
+        circle_marker_809a41dc7af5f9fc1305051cde450353.bindPopup(popup_43349369cb003f043ad1e379913a72ee)
+        ;
+
+        
+    
+    
+            var circle_marker_0073ca328e2f1690775ec5a6b6e5576d = L.circleMarker(
+                [10.792767, 106.626982],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_97ba7631d3053d3c36f3424211609c5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b768b0edbc3b66ccf48b1a991087e296 = $(`<div id="html_b768b0edbc3b66ccf48b1a991087e296" style="width: 100.0%; height: 100.0%;">Nhà hàng ẩm thực 66 - 2 lần</div>`)[0];
+                popup_97ba7631d3053d3c36f3424211609c5b.setContent(html_b768b0edbc3b66ccf48b1a991087e296);
+            
+        
+
+        circle_marker_0073ca328e2f1690775ec5a6b6e5576d.bindPopup(popup_97ba7631d3053d3c36f3424211609c5b)
+        ;
+
+        
+    
+    
+            var circle_marker_a673e10b06b81afbddffbcd48338f40e = L.circleMarker(
+                [10.7714872, 106.6321605],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_c03c41c5a1bfe7197229e672b73a338e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5e788082be3b26f6f094c6fa9a096b5 = $(`<div id="html_e5e788082be3b26f6f094c6fa9a096b5" style="width: 100.0%; height: 100.0%;">Công Ty TNHH Tân Hy Vọng - 1 lần</div>`)[0];
+                popup_c03c41c5a1bfe7197229e672b73a338e.setContent(html_e5e788082be3b26f6f094c6fa9a096b5);
+            
+        
+
+        circle_marker_a673e10b06b81afbddffbcd48338f40e.bindPopup(popup_c03c41c5a1bfe7197229e672b73a338e)
+        ;
+
+        
+    
+    
+            var circle_marker_64272961f778a0f6d93877895743ffcf = L.circleMarker(
+                [10.7754524, 106.6283088],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_33140211dc8680f3102493bd8c1e1aed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef029dbdbac69aa9b94959c9ebfb383b = $(`<div id="html_ef029dbdbac69aa9b94959c9ebfb383b" style="width: 100.0%; height: 100.0%;">LẨU GÀ NÒI QUÁN 246 - 3 lần</div>`)[0];
+                popup_33140211dc8680f3102493bd8c1e1aed.setContent(html_ef029dbdbac69aa9b94959c9ebfb383b);
+            
+        
+
+        circle_marker_64272961f778a0f6d93877895743ffcf.bindPopup(popup_33140211dc8680f3102493bd8c1e1aed)
+        ;
+
+        
+    
+    
+            var circle_marker_8c5bde5c4014468aa74b7fbb877bee9a = L.circleMarker(
+                [10.7754524, 106.6283088],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_dd28093b96fb8c2fb06dfd9183b34e34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ac545081699f4db70719917ed65772a = $(`<div id="html_8ac545081699f4db70719917ed65772a" style="width: 100.0%; height: 100.0%;">LẨU GÀ NÒI QUÁN 246 - 3 lần</div>`)[0];
+                popup_dd28093b96fb8c2fb06dfd9183b34e34.setContent(html_8ac545081699f4db70719917ed65772a);
+            
+        
+
+        circle_marker_8c5bde5c4014468aa74b7fbb877bee9a.bindPopup(popup_dd28093b96fb8c2fb06dfd9183b34e34)
+        ;
+
+        
+    
+    
+            var circle_marker_40f25c2d2c59a44b3646439117ce2744 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_0061d8e312b14a5f01d49d43517e2027 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c4f73bec50266d6adbc273a2e77269a = $(`<div id="html_0c4f73bec50266d6adbc273a2e77269a" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_0061d8e312b14a5f01d49d43517e2027.setContent(html_0c4f73bec50266d6adbc273a2e77269a);
+            
+        
+
+        circle_marker_40f25c2d2c59a44b3646439117ce2744.bindPopup(popup_0061d8e312b14a5f01d49d43517e2027)
+        ;
+
+        
+    
+    
+            var circle_marker_0dec7690ed86311d553d66cea3df2b21 = L.circleMarker(
+                [10.77462702, 106.6433974],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_2b9f5a89fc105d5a8354f3a6fa7a6355 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_324d03af71c31dc3f4d8aec056bdd861 = $(`<div id="html_324d03af71c31dc3f4d8aec056bdd861" style="width: 100.0%; height: 100.0%;">Trường tiểu học Hồ Văn Cường - 1 lần</div>`)[0];
+                popup_2b9f5a89fc105d5a8354f3a6fa7a6355.setContent(html_324d03af71c31dc3f4d8aec056bdd861);
+            
+        
+
+        circle_marker_0dec7690ed86311d553d66cea3df2b21.bindPopup(popup_2b9f5a89fc105d5a8354f3a6fa7a6355)
+        ;
+
+        
+    
+    
+            var circle_marker_3f067a85ea445f218ac556dd4732be4c = L.circleMarker(
+                [10.8066285, 106.6478651],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_895d0d5196c0e76f9cd41a1adba39c89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0fbe8d8315c6271514dd69db48954a3 = $(`<div id="html_a0fbe8d8315c6271514dd69db48954a3" style="width: 100.0%; height: 100.0%;">Bánh Tráng Nướng Phan Thiết - 2 lần</div>`)[0];
+                popup_895d0d5196c0e76f9cd41a1adba39c89.setContent(html_a0fbe8d8315c6271514dd69db48954a3);
+            
+        
+
+        circle_marker_3f067a85ea445f218ac556dd4732be4c.bindPopup(popup_895d0d5196c0e76f9cd41a1adba39c89)
+        ;
+
+        
+    
+    
+            var circle_marker_ae695788ffbd642a5eadc5e6b692b2f6 = L.circleMarker(
+                [10.8066285, 106.6478651],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_d5f89b7e1bbf95c0037a5547685c4335 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04b22ad8cb75373fbf378324872c4a63 = $(`<div id="html_04b22ad8cb75373fbf378324872c4a63" style="width: 100.0%; height: 100.0%;">Bánh Tráng Nướng Phan Thiết - 2 lần</div>`)[0];
+                popup_d5f89b7e1bbf95c0037a5547685c4335.setContent(html_04b22ad8cb75373fbf378324872c4a63);
+            
+        
+
+        circle_marker_ae695788ffbd642a5eadc5e6b692b2f6.bindPopup(popup_d5f89b7e1bbf95c0037a5547685c4335)
+        ;
+
+        
+    
+    
+            var circle_marker_34064a348e2527ef507df0cb818be4a7 = L.circleMarker(
+                [10.7570459, 106.6510681],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ecb973ed17a8a15fd43eb2076fdb93b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a22d8794697be820deb0a63bb1bfa2e = $(`<div id="html_8a22d8794697be820deb0a63bb1bfa2e" style="width: 100.0%; height: 100.0%;">Quán Nướng Mr Tom - 1 lần</div>`)[0];
+                popup_ecb973ed17a8a15fd43eb2076fdb93b4.setContent(html_8a22d8794697be820deb0a63bb1bfa2e);
+            
+        
+
+        circle_marker_34064a348e2527ef507df0cb818be4a7.bindPopup(popup_ecb973ed17a8a15fd43eb2076fdb93b4)
+        ;
+
+        
+    
+    
+            var circle_marker_ebea562f501b1153529ee85b96f951f6 = L.circleMarker(
+                [10.77008154606693, 106.6302210122941],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_1552ef9a3d7d5ab86f083133f93bb29b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a018943d18b499eeaecf9fe05e63a70 = $(`<div id="html_1a018943d18b499eeaecf9fe05e63a70" style="width: 100.0%; height: 100.0%;">10 Nguyễn Văn Vịnh - 1 lần</div>`)[0];
+                popup_1552ef9a3d7d5ab86f083133f93bb29b.setContent(html_1a018943d18b499eeaecf9fe05e63a70);
+            
+        
+
+        circle_marker_ebea562f501b1153529ee85b96f951f6.bindPopup(popup_1552ef9a3d7d5ab86f083133f93bb29b)
+        ;
+
+        
+    
+    
+            var circle_marker_7220ca3ca487816d49acbbc6d04686b9 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ac19e48e8073170c84a4524856e50592 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b0de9cc9faea30cc0d4f25ee13a2856 = $(`<div id="html_0b0de9cc9faea30cc0d4f25ee13a2856" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_ac19e48e8073170c84a4524856e50592.setContent(html_0b0de9cc9faea30cc0d4f25ee13a2856);
+            
+        
+
+        circle_marker_7220ca3ca487816d49acbbc6d04686b9.bindPopup(popup_ac19e48e8073170c84a4524856e50592)
+        ;
+
+        
+    
+    
+            var circle_marker_cdee7c08c044144f1b180bf16e53b0da = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_b97c57902bee2e2328d9fc6a4a8622f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2a38a6c30db249e029b85ad3a3eb595 = $(`<div id="html_e2a38a6c30db249e029b85ad3a3eb595" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_b97c57902bee2e2328d9fc6a4a8622f5.setContent(html_e2a38a6c30db249e029b85ad3a3eb595);
+            
+        
+
+        circle_marker_cdee7c08c044144f1b180bf16e53b0da.bindPopup(popup_b97c57902bee2e2328d9fc6a4a8622f5)
+        ;
+
+        
+    
+    
+            var circle_marker_66931afaa489d407327e3391f6e557f3 = L.circleMarker(
+                [10.7606831, 106.6299782],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_53eb684dd94edc276544409ae165ea8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_283412f5a22940761b96b34c258642e8 = $(`<div id="html_283412f5a22940761b96b34c258642e8" style="width: 100.0%; height: 100.0%;">Cheers Carillon 7: - 1 lần</div>`)[0];
+                popup_53eb684dd94edc276544409ae165ea8c.setContent(html_283412f5a22940761b96b34c258642e8);
+            
+        
+
+        circle_marker_66931afaa489d407327e3391f6e557f3.bindPopup(popup_53eb684dd94edc276544409ae165ea8c)
+        ;
+
+        
+    
+    
+            var circle_marker_4da9e2b36ccb752c974ded93b6794a47 = L.circleMarker(
+                [10.769751, 106.633852],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_07cad8ea8468303ead4090a3ded71dac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a195fcd978e4239986cf0fad10d0621 = $(`<div id="html_4a195fcd978e4239986cf0fad10d0621" style="width: 100.0%; height: 100.0%;">Pacific - Nhà Hàng Tiệc Cưới - 1 lần</div>`)[0];
+                popup_07cad8ea8468303ead4090a3ded71dac.setContent(html_4a195fcd978e4239986cf0fad10d0621);
+            
+        
+
+        circle_marker_4da9e2b36ccb752c974ded93b6794a47.bindPopup(popup_07cad8ea8468303ead4090a3ded71dac)
+        ;
+
+        
+    
+    
+            var circle_marker_1eb6d0dfd08f9ced63a3b18cc4952293 = L.circleMarker(
+                [10.7932506155289, 106.6270112721123],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_d20019c8d67ce19aeed64efbeec1c1e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0efdbc61d2c0e596de239a2c887f6d8 = $(`<div id="html_d0efdbc61d2c0e596de239a2c887f6d8" style="width: 100.0%; height: 100.0%;">Quán Thành Nội - Ẩm Thực Huế - 1 lần</div>`)[0];
+                popup_d20019c8d67ce19aeed64efbeec1c1e0.setContent(html_d0efdbc61d2c0e596de239a2c887f6d8);
+            
+        
+
+        circle_marker_1eb6d0dfd08f9ced63a3b18cc4952293.bindPopup(popup_d20019c8d67ce19aeed64efbeec1c1e0)
+        ;
+
+        
+    
+    
+            var circle_marker_5d376b34c92fe3f1bbc9c1ccb08b2e2a = L.circleMarker(
+                [10.7920398, 106.6440139],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_19d8af6757057effb921946ed15d11d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71a98cfcaf854d86e2b80963545752f9 = $(`<div id="html_71a98cfcaf854d86e2b80963545752f9" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_19d8af6757057effb921946ed15d11d2.setContent(html_71a98cfcaf854d86e2b80963545752f9);
+            
+        
+
+        circle_marker_5d376b34c92fe3f1bbc9c1ccb08b2e2a.bindPopup(popup_19d8af6757057effb921946ed15d11d2)
+        ;
+
+        
+    
+    
+            var circle_marker_9f20b70306556e22ca6ed2ee0338b1e4 = L.circleMarker(
+                [10.7920398, 106.6440139],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_28e81dbf910498b0841e93fc0cbbd455 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7001e9cc7cc0d5b9f3d040efa6a46473 = $(`<div id="html_7001e9cc7cc0d5b9f3d040efa6a46473" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_28e81dbf910498b0841e93fc0cbbd455.setContent(html_7001e9cc7cc0d5b9f3d040efa6a46473);
+            
+        
+
+        circle_marker_9f20b70306556e22ca6ed2ee0338b1e4.bindPopup(popup_28e81dbf910498b0841e93fc0cbbd455)
+        ;
+
+        
+    
+    
+            var circle_marker_4c9d93d1803533269cdd16ff9beb22e2 = L.circleMarker(
+                [10.7920398, 106.6440139],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ed27fb7ad1cbd28726c52ce5926fa57e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cc85e4578c77cbf15f8055f8fb7b1b7 = $(`<div id="html_6cc85e4578c77cbf15f8055f8fb7b1b7" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_ed27fb7ad1cbd28726c52ce5926fa57e.setContent(html_6cc85e4578c77cbf15f8055f8fb7b1b7);
+            
+        
+
+        circle_marker_4c9d93d1803533269cdd16ff9beb22e2.bindPopup(popup_ed27fb7ad1cbd28726c52ce5926fa57e)
+        ;
+
+        
+    
+    
+            var circle_marker_10121aac6b5894e43948d72f1b5ed5e3 = L.circleMarker(
+                [10.7329767, 106.7058079],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_9512eb7d26982cd89b161d03485e43e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84e2846b58dad833e4eeab47b3025d8c = $(`<div id="html_84e2846b58dad833e4eeab47b3025d8c" style="width: 100.0%; height: 100.0%;">Bạn Mê Quán - 1 lần</div>`)[0];
+                popup_9512eb7d26982cd89b161d03485e43e4.setContent(html_84e2846b58dad833e4eeab47b3025d8c);
+            
+        
+
+        circle_marker_10121aac6b5894e43948d72f1b5ed5e3.bindPopup(popup_9512eb7d26982cd89b161d03485e43e4)
+        ;
+
+        
+    
+    
+            var circle_marker_c54e45567cfd716f607e8f3f9dd255bf = L.circleMarker(
+                [10.80870835139951, 106.6474670162339],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_b5dc843d6cea107ed7ce12cdd266162f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab8cf5cef9fe814ef2ce497348f574d1 = $(`<div id="html_ab8cf5cef9fe814ef2ce497348f574d1" style="width: 100.0%; height: 100.0%;">51 Trần Văn Danh - 2 lần</div>`)[0];
+                popup_b5dc843d6cea107ed7ce12cdd266162f.setContent(html_ab8cf5cef9fe814ef2ce497348f574d1);
+            
+        
+
+        circle_marker_c54e45567cfd716f607e8f3f9dd255bf.bindPopup(popup_b5dc843d6cea107ed7ce12cdd266162f)
+        ;
+
+        
+    
+    
+            var circle_marker_500f84de005a0f799e1ac41fc6e0ae02 = L.circleMarker(
+                [10.80870835139951, 106.6474670162339],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_6fbc3cbc40823ec0bfdf4b2cac5ff852 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d50cdfbf8acf0124e4c326f23d1efeed = $(`<div id="html_d50cdfbf8acf0124e4c326f23d1efeed" style="width: 100.0%; height: 100.0%;">51 Trần Văn Danh - 2 lần</div>`)[0];
+                popup_6fbc3cbc40823ec0bfdf4b2cac5ff852.setContent(html_d50cdfbf8acf0124e4c326f23d1efeed);
+            
+        
+
+        circle_marker_500f84de005a0f799e1ac41fc6e0ae02.bindPopup(popup_6fbc3cbc40823ec0bfdf4b2cac5ff852)
+        ;
+
+        
+    
+    
+            var circle_marker_b8575e5cd0a84542b8dc0bc2b9a89c74 = L.circleMarker(
+                [10.858634, 106.6135486],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_a5d7895af9a5fb54c7e3c91d6a5554c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e87d43570bf74acb95aedab062326f5c = $(`<div id="html_e87d43570bf74acb95aedab062326f5c" style="width: 100.0%; height: 100.0%;">WinMart+ - 2 lần</div>`)[0];
+                popup_a5d7895af9a5fb54c7e3c91d6a5554c3.setContent(html_e87d43570bf74acb95aedab062326f5c);
+            
+        
+
+        circle_marker_b8575e5cd0a84542b8dc0bc2b9a89c74.bindPopup(popup_a5d7895af9a5fb54c7e3c91d6a5554c3)
+        ;
+
+        
+    
+    
+            var circle_marker_edbc80644b1a7e0bc5c27ed78538a0ed = L.circleMarker(
+                [10.8289734, 106.6322992],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_af242d94d6527a56709e3ce7519e6545 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf684b51556d2c5d6718ab4ec5945fd0 = $(`<div id="html_bf684b51556d2c5d6718ab4ec5945fd0" style="width: 100.0%; height: 100.0%;">Minh Chau - 2 lần</div>`)[0];
+                popup_af242d94d6527a56709e3ce7519e6545.setContent(html_bf684b51556d2c5d6718ab4ec5945fd0);
+            
+        
+
+        circle_marker_edbc80644b1a7e0bc5c27ed78538a0ed.bindPopup(popup_af242d94d6527a56709e3ce7519e6545)
+        ;
+
+        
+    
+    
+            var circle_marker_228708654d4f68ef7d3f92d45626c8b9 = L.circleMarker(
+                [10.8289734, 106.6322992],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_f7a0b95acdc453aa8151f297d8d491f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9010130c3b967efeeec804c7109c76e = $(`<div id="html_f9010130c3b967efeeec804c7109c76e" style="width: 100.0%; height: 100.0%;">Minh Chau - 2 lần</div>`)[0];
+                popup_f7a0b95acdc453aa8151f297d8d491f7.setContent(html_f9010130c3b967efeeec804c7109c76e);
+            
+        
+
+        circle_marker_228708654d4f68ef7d3f92d45626c8b9.bindPopup(popup_f7a0b95acdc453aa8151f297d8d491f7)
+        ;
+
+        
+    
+    
+            var circle_marker_d473cebdbf2d1c7d5989ac4a23ebba1d = L.circleMarker(
+                [10.781269, 106.632653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_93a864d4360e618731ce066359f496ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35779c57b4be8b8af17a8a29f20b8e7c = $(`<div id="html_35779c57b4be8b8af17a8a29f20b8e7c" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_93a864d4360e618731ce066359f496ab.setContent(html_35779c57b4be8b8af17a8a29f20b8e7c);
+            
+        
+
+        circle_marker_d473cebdbf2d1c7d5989ac4a23ebba1d.bindPopup(popup_93a864d4360e618731ce066359f496ab)
+        ;
+
+        
+    
+    
+            var circle_marker_c7cbe0e05d34bc2f709bfebe3f3011b6 = L.circleMarker(
+                [10.7754524, 106.6283088],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_6ed565921b516ae0f14ca28f10d38fd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_849abdbb2c13a0ec704529a2566d2eeb = $(`<div id="html_849abdbb2c13a0ec704529a2566d2eeb" style="width: 100.0%; height: 100.0%;">LẨU GÀ NÒI QUÁN 246 - 3 lần</div>`)[0];
+                popup_6ed565921b516ae0f14ca28f10d38fd7.setContent(html_849abdbb2c13a0ec704529a2566d2eeb);
+            
+        
+
+        circle_marker_c7cbe0e05d34bc2f709bfebe3f3011b6.bindPopup(popup_6ed565921b516ae0f14ca28f10d38fd7)
+        ;
+
+        
+    
+    
+            var circle_marker_a42edd422edcfd9cea0032c31b6ccf48 = L.circleMarker(
+                [10.77738, 106.664011],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_3df35552c44084826c14623e56282fb1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1520dae73876a2a029ba93d7d5beb48 = $(`<div id="html_e1520dae73876a2a029ba93d7d5beb48" style="width: 100.0%; height: 100.0%;">Cột Điện Kitchen - Lẩu & Món Nướng - 3 lần</div>`)[0];
+                popup_3df35552c44084826c14623e56282fb1.setContent(html_e1520dae73876a2a029ba93d7d5beb48);
+            
+        
+
+        circle_marker_a42edd422edcfd9cea0032c31b6ccf48.bindPopup(popup_3df35552c44084826c14623e56282fb1)
+        ;
+
+        
+    
+    
+            var circle_marker_15c01175465ef9c3207a1bb9abd3c052 = L.circleMarker(
+                [10.77738, 106.664011],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_44f3121b2139c97aca6ed2edc26d3da7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6eeed057fa319544d6b92b60c27047bd = $(`<div id="html_6eeed057fa319544d6b92b60c27047bd" style="width: 100.0%; height: 100.0%;">Cột Điện Kitchen - Lẩu & Món Nướng - 3 lần</div>`)[0];
+                popup_44f3121b2139c97aca6ed2edc26d3da7.setContent(html_6eeed057fa319544d6b92b60c27047bd);
+            
+        
+
+        circle_marker_15c01175465ef9c3207a1bb9abd3c052.bindPopup(popup_44f3121b2139c97aca6ed2edc26d3da7)
+        ;
+
+        
+    
+    
+            var circle_marker_fdcb59911b00056a1035533d5bf75632 = L.circleMarker(
+                [10.77335, 106.622084],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_3787f8fdeb95a7a8726c1797dfefbc84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fa7866bf2ca2a26fa35fb424634c4f4 = $(`<div id="html_0fa7866bf2ca2a26fa35fb424634c4f4" style="width: 100.0%; height: 100.0%;">Panda BBQ - Quán Thịt Nướng Đà Lạt - 1 lần</div>`)[0];
+                popup_3787f8fdeb95a7a8726c1797dfefbc84.setContent(html_0fa7866bf2ca2a26fa35fb424634c4f4);
+            
+        
+
+        circle_marker_fdcb59911b00056a1035533d5bf75632.bindPopup(popup_3787f8fdeb95a7a8726c1797dfefbc84)
+        ;
+
+        
+    
+    
+            var circle_marker_ab9a95e49f5f440f6add1c1cd6bec06c = L.circleMarker(
+                [10.78407769344123, 106.6395454820694],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_e7fd12f52d16e21759764fe7337d2e1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9258cd033a70ff57974dfc6e0b68ae45 = $(`<div id="html_9258cd033a70ff57974dfc6e0b68ae45" style="width: 100.0%; height: 100.0%;">9 Thoại Ngọc Hầu - 3 lần</div>`)[0];
+                popup_e7fd12f52d16e21759764fe7337d2e1f.setContent(html_9258cd033a70ff57974dfc6e0b68ae45);
+            
+        
+
+        circle_marker_ab9a95e49f5f440f6add1c1cd6bec06c.bindPopup(popup_e7fd12f52d16e21759764fe7337d2e1f)
+        ;
+
+        
+    
+    
+            var circle_marker_4e17dee7b14576786f92c76ede6b1bbf = L.circleMarker(
+                [10.78407769344123, 106.6395454820694],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_4b3701825f2fc61140011ed4a4e7a705 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3eeb6e2c1e293789a733c7310a90fc24 = $(`<div id="html_3eeb6e2c1e293789a733c7310a90fc24" style="width: 100.0%; height: 100.0%;">9 Thoại Ngọc Hầu - 3 lần</div>`)[0];
+                popup_4b3701825f2fc61140011ed4a4e7a705.setContent(html_3eeb6e2c1e293789a733c7310a90fc24);
+            
+        
+
+        circle_marker_4e17dee7b14576786f92c76ede6b1bbf.bindPopup(popup_4b3701825f2fc61140011ed4a4e7a705)
+        ;
+
+        
+    
+    
+            var circle_marker_a1bb7dc9c4e08e8686f875bd9bf1f19c = L.circleMarker(
+                [10.78407769344123, 106.6395454820694],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_b4aa2c046f46e186fb29235f2596ae87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4593562914e18288c7c8d81d4cd88e4 = $(`<div id="html_c4593562914e18288c7c8d81d4cd88e4" style="width: 100.0%; height: 100.0%;">9 Thoại Ngọc Hầu - 3 lần</div>`)[0];
+                popup_b4aa2c046f46e186fb29235f2596ae87.setContent(html_c4593562914e18288c7c8d81d4cd88e4);
+            
+        
+
+        circle_marker_a1bb7dc9c4e08e8686f875bd9bf1f19c.bindPopup(popup_b4aa2c046f46e186fb29235f2596ae87)
+        ;
+
+        
+    
+    
+            var circle_marker_b678f770d42632d8cd4a552c90c2fd6d = L.circleMarker(
+                [10.8435051, 106.6304526],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_4a3c98d0a497c9f1c9b6f592e915cc55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c8ac9c4ec8f8ab70ca363f1d8a27f2f = $(`<div id="html_0c8ac9c4ec8f8ab70ca363f1d8a27f2f" style="width: 100.0%; height: 100.0%;">Tiệm Khuy Nút - Khuy Mắt Phượng - 3 lần</div>`)[0];
+                popup_4a3c98d0a497c9f1c9b6f592e915cc55.setContent(html_0c8ac9c4ec8f8ab70ca363f1d8a27f2f);
+            
+        
+
+        circle_marker_b678f770d42632d8cd4a552c90c2fd6d.bindPopup(popup_4a3c98d0a497c9f1c9b6f592e915cc55)
+        ;
+
+        
+    
+    
+            var circle_marker_b313a62e793b4da8ff952f1e6a5f7eba = L.circleMarker(
+                [10.7762393, 106.6100192],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_d9bce7dc663b12d10bf866dd38374a72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a00d5a9b229c33ee5760999cb327f1ad = $(`<div id="html_a00d5a9b229c33ee5760999cb327f1ad" style="width: 100.0%; height: 100.0%;">Công Ty Cp Quốc Tế Tài Vinh - 1 lần</div>`)[0];
+                popup_d9bce7dc663b12d10bf866dd38374a72.setContent(html_a00d5a9b229c33ee5760999cb327f1ad);
+            
+        
+
+        circle_marker_b313a62e793b4da8ff952f1e6a5f7eba.bindPopup(popup_d9bce7dc663b12d10bf866dd38374a72)
+        ;
+
+        
+    
+    
+            var circle_marker_ae03ac4056928ae085b01b3fdc2d08ab = L.circleMarker(
+                [10.781269, 106.632653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_74fb8acf216640214d01f6c480b85f59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_247f1840129fb621375f49a64c030396 = $(`<div id="html_247f1840129fb621375f49a64c030396" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_74fb8acf216640214d01f6c480b85f59.setContent(html_247f1840129fb621375f49a64c030396);
+            
+        
+
+        circle_marker_ae03ac4056928ae085b01b3fdc2d08ab.bindPopup(popup_74fb8acf216640214d01f6c480b85f59)
+        ;
+
+        
+    
+    
+            var circle_marker_df229e7bd40c7b611088f948eb3f9c56 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_288c7cf46c8ac5559c78563523216ef6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52cd8bd322c575e96e34e17e48c371ee = $(`<div id="html_52cd8bd322c575e96e34e17e48c371ee" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_288c7cf46c8ac5559c78563523216ef6.setContent(html_52cd8bd322c575e96e34e17e48c371ee);
+            
+        
+
+        circle_marker_df229e7bd40c7b611088f948eb3f9c56.bindPopup(popup_288c7cf46c8ac5559c78563523216ef6)
+        ;
+
+        
+    
+    
+            var circle_marker_d7060874d58c75d9cdae73ca8f78db33 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_bd3d45790bb1ef8e6dd9dd78adaccd85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ed004f0440a1225484c6167ad229fa8 = $(`<div id="html_6ed004f0440a1225484c6167ad229fa8" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_bd3d45790bb1ef8e6dd9dd78adaccd85.setContent(html_6ed004f0440a1225484c6167ad229fa8);
+            
+        
+
+        circle_marker_d7060874d58c75d9cdae73ca8f78db33.bindPopup(popup_bd3d45790bb1ef8e6dd9dd78adaccd85)
+        ;
+
+        
+    
+    
+            var circle_marker_e82dab502141c2a94af9ebcb14e844cc = L.circleMarker(
+                [10.8126048, 106.6209212],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_394890bb2a4c314a90880d92b1e2cd8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e782d3b9a632eb46991c7d74c39a707 = $(`<div id="html_1e782d3b9a632eb46991c7d74c39a707" style="width: 100.0%; height: 100.0%;">Công Ty Tnhh Quảng Cáo Diều Việt - 1 lần</div>`)[0];
+                popup_394890bb2a4c314a90880d92b1e2cd8c.setContent(html_1e782d3b9a632eb46991c7d74c39a707);
+            
+        
+
+        circle_marker_e82dab502141c2a94af9ebcb14e844cc.bindPopup(popup_394890bb2a4c314a90880d92b1e2cd8c)
+        ;
+
+        
+    
+    
+            var circle_marker_41dd4160155e0d6879715e475720a1f6 = L.circleMarker(
+                [10.780959, 106.6218198],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_4561095ecc3ceb801da91dc38ae75a2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0dca730f1a57ed0578f584d4fd211f97 = $(`<div id="html_0dca730f1a57ed0578f584d4fd211f97" style="width: 100.0%; height: 100.0%;">208 Lê Cao Lãng - 1 lần</div>`)[0];
+                popup_4561095ecc3ceb801da91dc38ae75a2b.setContent(html_0dca730f1a57ed0578f584d4fd211f97);
+            
+        
+
+        circle_marker_41dd4160155e0d6879715e475720a1f6.bindPopup(popup_4561095ecc3ceb801da91dc38ae75a2b)
+        ;
+
+        
+    
+    
+            var circle_marker_bd88c71694e6abfb1162bbb986f96ebb = L.circleMarker(
+                [10.79179, 106.6368976],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_f7a71b89029f0371e32890813aa634b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a938fddf6be1a7ea3e38e257c617d855 = $(`<div id="html_a938fddf6be1a7ea3e38e257c617d855" style="width: 100.0%; height: 100.0%;">Karaoke Zing - 1 lần</div>`)[0];
+                popup_f7a71b89029f0371e32890813aa634b1.setContent(html_a938fddf6be1a7ea3e38e257c617d855);
+            
+        
+
+        circle_marker_bd88c71694e6abfb1162bbb986f96ebb.bindPopup(popup_f7a71b89029f0371e32890813aa634b1)
+        ;
+
+        
+    
+    
+            var circle_marker_a405959495f743f7b80325c6b47d9f48 = L.circleMarker(
+                [10.8050994, 106.6244825],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_63a5dd4adfa35caa4ec003bea0e733f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f3c06b970dde6fcd5f9c41efc083048 = $(`<div id="html_0f3c06b970dde6fcd5f9c41efc083048" style="width: 100.0%; height: 100.0%;">Đại Lý Bia Nước Giải Khát Ánh Hồng - 1 lần</div>`)[0];
+                popup_63a5dd4adfa35caa4ec003bea0e733f4.setContent(html_0f3c06b970dde6fcd5f9c41efc083048);
+            
+        
+
+        circle_marker_a405959495f743f7b80325c6b47d9f48.bindPopup(popup_63a5dd4adfa35caa4ec003bea0e733f4)
+        ;
+
+        
+    
+    
+            var circle_marker_603dc2925d58d86aa91748c3740817fc = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_bbe5f23220e3865ef6a8c1ecdcaa83b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2767594a2f5e34ff46ce66c6b3effc4 = $(`<div id="html_f2767594a2f5e34ff46ce66c6b3effc4" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_bbe5f23220e3865ef6a8c1ecdcaa83b9.setContent(html_f2767594a2f5e34ff46ce66c6b3effc4);
+            
+        
+
+        circle_marker_603dc2925d58d86aa91748c3740817fc.bindPopup(popup_bbe5f23220e3865ef6a8c1ecdcaa83b9)
+        ;
+
+        
+    
+    
+            var circle_marker_05d5186b44209e97c90850b4e4d96aa8 = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_0d9c60dd6d2475f7c7147f26c0861573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e47639b3517f1763686190f008471791 = $(`<div id="html_e47639b3517f1763686190f008471791" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_0d9c60dd6d2475f7c7147f26c0861573.setContent(html_e47639b3517f1763686190f008471791);
+            
+        
+
+        circle_marker_05d5186b44209e97c90850b4e4d96aa8.bindPopup(popup_0d9c60dd6d2475f7c7147f26c0861573)
+        ;
+
+        
+    
+    
+            var circle_marker_206391294a4f4563e24fdf778d15bf46 = L.circleMarker(
+                [10.74946387, 106.6451785],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_bfc9f1891f451810cc10ed792b3f4cf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24b268ab1cdf76bc4afb9af497034175 = $(`<div id="html_24b268ab1cdf76bc4afb9af497034175" style="width: 100.0%; height: 100.0%;">Quán Một Tám Một - 1 lần</div>`)[0];
+                popup_bfc9f1891f451810cc10ed792b3f4cf9.setContent(html_24b268ab1cdf76bc4afb9af497034175);
+            
+        
+
+        circle_marker_206391294a4f4563e24fdf778d15bf46.bindPopup(popup_bfc9f1891f451810cc10ed792b3f4cf9)
+        ;
+
+        
+    
+    
+            var circle_marker_05b5500eab4fe8844e8f637294238aa1 = L.circleMarker(
+                [10.7788217, 106.6806334],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_196677c00112e13d0422fdc676b75e43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41f059e48b88e0186b4be419c338bafd = $(`<div id="html_41f059e48b88e0186b4be419c338bafd" style="width: 100.0%; height: 100.0%;">Nhà Cho Thuê Nguyễn Thành Long - 1 lần</div>`)[0];
+                popup_196677c00112e13d0422fdc676b75e43.setContent(html_41f059e48b88e0186b4be419c338bafd);
+            
+        
+
+        circle_marker_05b5500eab4fe8844e8f637294238aa1.bindPopup(popup_196677c00112e13d0422fdc676b75e43)
+        ;
+
+        
+    
+    
+            var circle_marker_bfe782dbada5602c0dcaa961ed027864 = L.circleMarker(
+                [10.8668387, 106.6184928],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_d2be9cae46d95f0c49c68ffa6c46a6d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bce5a37c9136f8760adf80d64a088e14 = $(`<div id="html_bce5a37c9136f8760adf80d64a088e14" style="width: 100.0%; height: 100.0%;">Bộ môn Giáo dục thể chất - Quốc phòng - 1 lần</div>`)[0];
+                popup_d2be9cae46d95f0c49c68ffa6c46a6d1.setContent(html_bce5a37c9136f8760adf80d64a088e14);
+            
+        
+
+        circle_marker_bfe782dbada5602c0dcaa961ed027864.bindPopup(popup_d2be9cae46d95f0c49c68ffa6c46a6d1)
+        ;
+
+        
+    
+    
+            var circle_marker_0250b9dac28ba3ddff8cd842ec3f9837 = L.circleMarker(
+                [10.858634, 106.6135486],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_1b5106069fa48244b8adfc00eae062c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cae02aebdd223094aaa13769ee316641 = $(`<div id="html_cae02aebdd223094aaa13769ee316641" style="width: 100.0%; height: 100.0%;">WinMart+ - 2 lần</div>`)[0];
+                popup_1b5106069fa48244b8adfc00eae062c5.setContent(html_cae02aebdd223094aaa13769ee316641);
+            
+        
+
+        circle_marker_0250b9dac28ba3ddff8cd842ec3f9837.bindPopup(popup_1b5106069fa48244b8adfc00eae062c5)
+        ;
+
+        
+    
+    
+            var circle_marker_7203eaee8d3bf5f15740cca6ebb5e62c = L.circleMarker(
+                [10.7807212, 106.6439453],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_eb927b3f0a469c6df4b78513c228dfb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a04d7bd9d57d255714227ac0f11bad2 = $(`<div id="html_5a04d7bd9d57d255714227ac0f11bad2" style="width: 100.0%; height: 100.0%;">Tiệm Uốn Tóc Long Ngân - 1 lần</div>`)[0];
+                popup_eb927b3f0a469c6df4b78513c228dfb3.setContent(html_5a04d7bd9d57d255714227ac0f11bad2);
+            
+        
+
+        circle_marker_7203eaee8d3bf5f15740cca6ebb5e62c.bindPopup(popup_eb927b3f0a469c6df4b78513c228dfb3)
+        ;
+
+        
+    
+    
+            var circle_marker_44a416b269e1a9cfc79d48ccc619e63b = L.circleMarker(
+                [10.7882148, 106.6208453],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_790085b7d5b7f53604cd318361a04dfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07c6effbfb282d440437f49775be379b = $(`<div id="html_07c6effbfb282d440437f49775be379b" style="width: 100.0%; height: 100.0%;">Tiệm Hớt Tóc Trường Vũ - 1 lần</div>`)[0];
+                popup_790085b7d5b7f53604cd318361a04dfe.setContent(html_07c6effbfb282d440437f49775be379b);
+            
+        
+
+        circle_marker_44a416b269e1a9cfc79d48ccc619e63b.bindPopup(popup_790085b7d5b7f53604cd318361a04dfe)
+        ;
+
+        
+    
+    
+            var circle_marker_019e31e4c198cf0b245eafd88995ae50 = L.circleMarker(
+                [10.8434707, 106.6506936],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_d449a14d59fc12ba783a9d292f22dda9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a05f72866d1ac9163e5cb675dba93c8a = $(`<div id="html_a05f72866d1ac9163e5cb675dba93c8a" style="width: 100.0%; height: 100.0%;">307 Đ. Nguyễn Văn Khối - 1 lần</div>`)[0];
+                popup_d449a14d59fc12ba783a9d292f22dda9.setContent(html_a05f72866d1ac9163e5cb675dba93c8a);
+            
+        
+
+        circle_marker_019e31e4c198cf0b245eafd88995ae50.bindPopup(popup_d449a14d59fc12ba783a9d292f22dda9)
+        ;
+
+        
+    
+    
+            var circle_marker_8b9c64477bb7683855054647946a0eee = L.circleMarker(
+                [10.8434361, 106.6530747],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_b4d5730980b22703389f4cb8ce4f6015 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79e210769700c3b1cb46315b79681ff6 = $(`<div id="html_79e210769700c3b1cb46315b79681ff6" style="width: 100.0%; height: 100.0%;">Quán Đức Đà Nẵng - 1 lần</div>`)[0];
+                popup_b4d5730980b22703389f4cb8ce4f6015.setContent(html_79e210769700c3b1cb46315b79681ff6);
+            
+        
+
+        circle_marker_8b9c64477bb7683855054647946a0eee.bindPopup(popup_b4d5730980b22703389f4cb8ce4f6015)
+        ;
+
+        
+    
+    
+            var circle_marker_73f17bbff146fdf9112d1086398b99c9 = L.circleMarker(
+                [10.8528268, 106.6259874],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_a97be6b82bf741833c51f4e06064f15a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4547796d6e19b08c5f71e492fa71e238 = $(`<div id="html_4547796d6e19b08c5f71e492fa71e238" style="width: 100.0%; height: 100.0%;">quán nhâu xyz - 1 lần</div>`)[0];
+                popup_a97be6b82bf741833c51f4e06064f15a.setContent(html_4547796d6e19b08c5f71e492fa71e238);
+            
+        
+
+        circle_marker_73f17bbff146fdf9112d1086398b99c9.bindPopup(popup_a97be6b82bf741833c51f4e06064f15a)
+        ;
+
+        
+    
+    
+            var circle_marker_10330abc124f77b6c930329a3a4abb1f = L.circleMarker(
+                [10.8365574, 106.6757103],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_35d80c7183be9c4f02331c8900b29489 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c93099959c1ad946c546c0306aaad5b = $(`<div id="html_6c93099959c1ad946c546c0306aaad5b" style="width: 100.0%; height: 100.0%;">Lộ Thiên Quán - 1 lần</div>`)[0];
+                popup_35d80c7183be9c4f02331c8900b29489.setContent(html_6c93099959c1ad946c546c0306aaad5b);
+            
+        
+
+        circle_marker_10330abc124f77b6c930329a3a4abb1f.bindPopup(popup_35d80c7183be9c4f02331c8900b29489)
+        ;
+
+        
+    
+    
+            var circle_marker_cac26849859a85d1281d9093601165f1 = L.circleMarker(
+                [10.840958, 106.6237335],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_8e4d90f15df95452600147b2f5c0861d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55c071208685154b67a3bb5ee2df2f0f = $(`<div id="html_55c071208685154b67a3bb5ee2df2f0f" style="width: 100.0%; height: 100.0%;">Phường Tân Hưng Thuận - 1 lần</div>`)[0];
+                popup_8e4d90f15df95452600147b2f5c0861d.setContent(html_55c071208685154b67a3bb5ee2df2f0f);
+            
+        
+
+        circle_marker_cac26849859a85d1281d9093601165f1.bindPopup(popup_8e4d90f15df95452600147b2f5c0861d)
+        ;
+
+        
+    
+    
+            var circle_marker_11b035e9d98be68680608f5ccdd7b93a = L.circleMarker(
+                [10.844848, 106.639672],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_5ab7b950c8e9cb55c42adbe7ec8c85a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4eef86a5e56cca847827fe830cb78ab4 = $(`<div id="html_4eef86a5e56cca847827fe830cb78ab4" style="width: 100.0%; height: 100.0%;">Zanado.com - Thời trang Nam Nữ - 1 lần</div>`)[0];
+                popup_5ab7b950c8e9cb55c42adbe7ec8c85a7.setContent(html_4eef86a5e56cca847827fe830cb78ab4);
+            
+        
+
+        circle_marker_11b035e9d98be68680608f5ccdd7b93a.bindPopup(popup_5ab7b950c8e9cb55c42adbe7ec8c85a7)
+        ;
+
+        
+    
+    
+            var circle_marker_e0ec8822aeb2f0bee73c33f2d7befb67 = L.circleMarker(
+                [10.838492, 106.6506997],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_166fc4c0e49ac211fc3dea1c91b74d0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd8630af7a7b5cbb9b163844d13b6361 = $(`<div id="html_fd8630af7a7b5cbb9b163844d13b6361" style="width: 100.0%; height: 100.0%;">Lò Đất Bbq Gò Vấp - 1 lần</div>`)[0];
+                popup_166fc4c0e49ac211fc3dea1c91b74d0b.setContent(html_fd8630af7a7b5cbb9b163844d13b6361);
+            
+        
+
+        circle_marker_e0ec8822aeb2f0bee73c33f2d7befb67.bindPopup(popup_166fc4c0e49ac211fc3dea1c91b74d0b)
+        ;
+
+        
+    
+    
+            var circle_marker_8470cd0651d43d85343cc8d64e929990 = L.circleMarker(
+                [10.8482914, 106.6335192],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_c676c13a0c21108c1a8de303fc8f6174 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1491ac7a1f4b467d57f6326ca55585b2 = $(`<div id="html_1491ac7a1f4b467d57f6326ca55585b2" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_c676c13a0c21108c1a8de303fc8f6174.setContent(html_1491ac7a1f4b467d57f6326ca55585b2);
+            
+        
+
+        circle_marker_8470cd0651d43d85343cc8d64e929990.bindPopup(popup_c676c13a0c21108c1a8de303fc8f6174)
+        ;
+
+        
+    
+    
+            var circle_marker_1f024ed71256852950676f12a397dba0 = L.circleMarker(
+                [10.8385484, 106.6669839],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_5fcbd46f5fd77c61bef21e953299b7ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c521151b0760d5da6ebb9d17929570ed = $(`<div id="html_c521151b0760d5da6ebb9d17929570ed" style="width: 100.0%; height: 100.0%;">Công Ty Tnhh Tm Dịch Vụ Du Lịch Khang Linh - 1 lần</div>`)[0];
+                popup_5fcbd46f5fd77c61bef21e953299b7ea.setContent(html_c521151b0760d5da6ebb9d17929570ed);
+            
+        
+
+        circle_marker_1f024ed71256852950676f12a397dba0.bindPopup(popup_5fcbd46f5fd77c61bef21e953299b7ea)
+        ;
+
+        
+    
+    
+            var circle_marker_bb80d35fa40b8b631558153a21095548 = L.circleMarker(
+                [10.8435051, 106.6304526],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_ead13e2becf1fc5cabacd7de447ee8d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da5abe6aae21ae4cf7f9dd462a69f0b9 = $(`<div id="html_da5abe6aae21ae4cf7f9dd462a69f0b9" style="width: 100.0%; height: 100.0%;">Tiệm Khuy Nút - Khuy Mắt Phượng - 3 lần</div>`)[0];
+                popup_ead13e2becf1fc5cabacd7de447ee8d1.setContent(html_da5abe6aae21ae4cf7f9dd462a69f0b9);
+            
+        
+
+        circle_marker_bb80d35fa40b8b631558153a21095548.bindPopup(popup_ead13e2becf1fc5cabacd7de447ee8d1)
+        ;
+
+        
+    
+    
+            var circle_marker_34287beb7ba08ad5ec0033e6f7c4388e = L.circleMarker(
+                [10.8435051, 106.6304526],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_dd874a5c5236d8678166bf2510e1b621 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea18e466e2b7a2f9ec680df6c0e4aa2f = $(`<div id="html_ea18e466e2b7a2f9ec680df6c0e4aa2f" style="width: 100.0%; height: 100.0%;">Tiệm Khuy Nút - Khuy Mắt Phượng - 3 lần</div>`)[0];
+                popup_dd874a5c5236d8678166bf2510e1b621.setContent(html_ea18e466e2b7a2f9ec680df6c0e4aa2f);
+            
+        
+
+        circle_marker_34287beb7ba08ad5ec0033e6f7c4388e.bindPopup(popup_dd874a5c5236d8678166bf2510e1b621)
+        ;
+
+        
+    
+    
+            var circle_marker_7b7086c896d93e7dee1dcf66e74b9a3e = L.circleMarker(
+                [10.8482914, 106.6335192],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+        var popup_73135e46280e74f39869527b79245694 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c2bd8c35d49ecdf90dcfe919afdb10f = $(`<div id="html_0c2bd8c35d49ecdf90dcfe919afdb10f" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_73135e46280e74f39869527b79245694.setContent(html_0c2bd8c35d49ecdf90dcfe919afdb10f);
+            
+        
+
+        circle_marker_7b7086c896d93e7dee1dcf66e74b9a3e.bindPopup(popup_73135e46280e74f39869527b79245694)
+        ;
+
+        
+    
+    
+            var marker_12f91ea8a756eb742288b49dde1ad47d = L.marker(
+                [10.7816, 106.633],
+                {
+}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+            var icon_4c33dfebf14d886f7f0832c55f2f335d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48aaceb59068d4434e86ac70f9fe535c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8e4a02d470c018811c0e4e6aacf44e1 = $(`<div id="html_d8e4a02d470c018811c0e4e6aacf44e1" style="width: 100.0%; height: 100.0%;">Chi nhánh</div>`)[0];
+                popup_48aaceb59068d4434e86ac70f9fe535c.setContent(html_d8e4a02d470c018811c0e4e6aacf44e1);
+            
+        
+
+        marker_12f91ea8a756eb742288b49dde1ad47d.bindPopup(popup_48aaceb59068d4434e86ac70f9fe535c)
+        ;
+
+        
+    
+    
+                marker_12f91ea8a756eb742288b49dde1ad47d.setIcon(icon_4c33dfebf14d886f7f0832c55f2f335d);
+            
+    
+            var circle_55a73d3acb81cd2c416a0d5e8b360570 = L.circle(
+                [10.7816, 106.633],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+            var marker_06a78b2f4a9159b6d7a5d376ca39464a = L.marker(
+                [10.8502, 106.632],
+                {
+}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+            var icon_cd43b94846a3012f1d6afdb10150e81e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e4702d98e980a4589daddd35a4bad14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f7695ffad495a3c9dbcdc1f9bce0033 = $(`<div id="html_6f7695ffad495a3c9dbcdc1f9bce0033" style="width: 100.0%; height: 100.0%;">Chi nhánh</div>`)[0];
+                popup_3e4702d98e980a4589daddd35a4bad14.setContent(html_6f7695ffad495a3c9dbcdc1f9bce0033);
+            
+        
+
+        marker_06a78b2f4a9159b6d7a5d376ca39464a.bindPopup(popup_3e4702d98e980a4589daddd35a4bad14)
+        ;
+
+        
+    
+    
+                marker_06a78b2f4a9159b6d7a5d376ca39464a.setIcon(icon_cd43b94846a3012f1d6afdb10150e81e);
+            
+    
+            var circle_94f15ffdff2c458dfda3a34f98fc622a = L.circle(
+                [10.8502, 106.632],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_d3ec33bb305d5798d913087f9c56716b);
+        
+    
+            feature_group_d3ec33bb305d5798d913087f9c56716b.addTo(map_ce34491cc64b95e4a932f152ed6d98da);
+        
+    
+            var feature_group_5fd5a734d5b91a244682502165008e95 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_20a2780909ceeccc1cd6ecbc27a25cf0 = L.circleMarker(
+                [10.7879403, 106.6186959],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_683886b094ab0853b4e63ded54cdc9b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_782bdc58ee324bbc784199312a9652d4 = $(`<div id="html_782bdc58ee324bbc784199312a9652d4" style="width: 100.0%; height: 100.0%;">Quán Ốc Sinh Viên - 1 lần</div>`)[0];
+                popup_683886b094ab0853b4e63ded54cdc9b1.setContent(html_782bdc58ee324bbc784199312a9652d4);
+            
+        
+
+        circle_marker_20a2780909ceeccc1cd6ecbc27a25cf0.bindPopup(popup_683886b094ab0853b4e63ded54cdc9b1)
+        ;
+
+        
+    
+    
+            var circle_marker_f9827b7b71bee2fd3624d43d5259e9d7 = L.circleMarker(
+                [10.80707772387192, 106.6273785448236],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_a353c3d1c842090573970cd3d228ecc0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a0d3705e1714cd549b99a5a70ff4de3 = $(`<div id="html_9a0d3705e1714cd549b99a5a70ff4de3" style="width: 100.0%; height: 100.0%;">14-14A Dương Đức Hiền - 2 lần</div>`)[0];
+                popup_a353c3d1c842090573970cd3d228ecc0.setContent(html_9a0d3705e1714cd549b99a5a70ff4de3);
+            
+        
+
+        circle_marker_f9827b7b71bee2fd3624d43d5259e9d7.bindPopup(popup_a353c3d1c842090573970cd3d228ecc0)
+        ;
+
+        
+    
+    
+            var circle_marker_0952a44d890648896e465152f61f5bbf = L.circleMarker(
+                [10.80707772387192, 106.6273785448236],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_28255828453f35b988847a9c0e28fa24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63ea17070712d66fc47d59522791d8d2 = $(`<div id="html_63ea17070712d66fc47d59522791d8d2" style="width: 100.0%; height: 100.0%;">14-14A Dương Đức Hiền - 2 lần</div>`)[0];
+                popup_28255828453f35b988847a9c0e28fa24.setContent(html_63ea17070712d66fc47d59522791d8d2);
+            
+        
+
+        circle_marker_0952a44d890648896e465152f61f5bbf.bindPopup(popup_28255828453f35b988847a9c0e28fa24)
+        ;
+
+        
+    
+    
+            var circle_marker_32cb0990c0ed15ba48aeac4b1ec5195d = L.circleMarker(
+                [10.7852784, 106.6414591],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_e3d9907eb2e73415027a05b0f45f3c6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69e71c9ae7519f9539d18373ed8f80b7 = $(`<div id="html_69e71c9ae7519f9539d18373ed8f80b7" style="width: 100.0%; height: 100.0%;">Nhà Hàng Hoa Viên Nam Bộ - 2 lần</div>`)[0];
+                popup_e3d9907eb2e73415027a05b0f45f3c6c.setContent(html_69e71c9ae7519f9539d18373ed8f80b7);
+            
+        
+
+        circle_marker_32cb0990c0ed15ba48aeac4b1ec5195d.bindPopup(popup_e3d9907eb2e73415027a05b0f45f3c6c)
+        ;
+
+        
+    
+    
+            var circle_marker_9364ccd1e04bab577661c67d8e43b24c = L.circleMarker(
+                [10.7852784, 106.6414591],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_dc244b4816e750f1253a3bb8aa50fa98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6d091da3484e00f0ca02e992f41a98b = $(`<div id="html_d6d091da3484e00f0ca02e992f41a98b" style="width: 100.0%; height: 100.0%;">Nhà Hàng Hoa Viên Nam Bộ - 2 lần</div>`)[0];
+                popup_dc244b4816e750f1253a3bb8aa50fa98.setContent(html_d6d091da3484e00f0ca02e992f41a98b);
+            
+        
+
+        circle_marker_9364ccd1e04bab577661c67d8e43b24c.bindPopup(popup_dc244b4816e750f1253a3bb8aa50fa98)
+        ;
+
+        
+    
+    
+            var circle_marker_e015d27120b133082c58ba63d93ab67f = L.circleMarker(
+                [10.775403, 106.628211],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_3f073f55b19a174eee13a23052e51cbe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef9f2a8122d4b745f8a4cfe27afa0158 = $(`<div id="html_ef9f2a8122d4b745f8a4cfe27afa0158" style="width: 100.0%; height: 100.0%;">QUÁN ỐC ĐÊM - 4 lần</div>`)[0];
+                popup_3f073f55b19a174eee13a23052e51cbe.setContent(html_ef9f2a8122d4b745f8a4cfe27afa0158);
+            
+        
+
+        circle_marker_e015d27120b133082c58ba63d93ab67f.bindPopup(popup_3f073f55b19a174eee13a23052e51cbe)
+        ;
+
+        
+    
+    
+            var circle_marker_f484ff11fc1a97a373c505a36a0364af = L.circleMarker(
+                [10.775403, 106.628211],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_5b34c70aa264b0efeec69fe114be7f98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f04789a36f2fd44944f2a769897a73d7 = $(`<div id="html_f04789a36f2fd44944f2a769897a73d7" style="width: 100.0%; height: 100.0%;">QUÁN ỐC ĐÊM - 4 lần</div>`)[0];
+                popup_5b34c70aa264b0efeec69fe114be7f98.setContent(html_f04789a36f2fd44944f2a769897a73d7);
+            
+        
+
+        circle_marker_f484ff11fc1a97a373c505a36a0364af.bindPopup(popup_5b34c70aa264b0efeec69fe114be7f98)
+        ;
+
+        
+    
+    
+            var circle_marker_e62c08d72057f7c917c6112ee0317c9f = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_280976f732e0d9cfee49b52f8d23d2eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7c667f98957199e12b79f120aed37fe = $(`<div id="html_d7c667f98957199e12b79f120aed37fe" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_280976f732e0d9cfee49b52f8d23d2eb.setContent(html_d7c667f98957199e12b79f120aed37fe);
+            
+        
+
+        circle_marker_e62c08d72057f7c917c6112ee0317c9f.bindPopup(popup_280976f732e0d9cfee49b52f8d23d2eb)
+        ;
+
+        
+    
+    
+            var circle_marker_714517bf08e8c0190ae418158b164a1c = L.circleMarker(
+                [10.7679673, 106.6272377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_ad33b436d27b7204c14940f4e1ce7a0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_841e2584df657fec0038a9a311da1080 = $(`<div id="html_841e2584df657fec0038a9a311da1080" style="width: 100.0%; height: 100.0%;">Quán Cà Phê - Cơm Út Diệu - 12 lần</div>`)[0];
+                popup_ad33b436d27b7204c14940f4e1ce7a0c.setContent(html_841e2584df657fec0038a9a311da1080);
+            
+        
+
+        circle_marker_714517bf08e8c0190ae418158b164a1c.bindPopup(popup_ad33b436d27b7204c14940f4e1ce7a0c)
+        ;
+
+        
+    
+    
+            var circle_marker_8080d1bcc671dd56d409ca75c0ab4ef5 = L.circleMarker(
+                [10.84722633215587, 106.6588116230221],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_c708ade49a0fbb94a70c64e5f733a7ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c683e7976061670b67b89fe3793892b9 = $(`<div id="html_c683e7976061670b67b89fe3793892b9" style="width: 100.0%; height: 100.0%;">209 Đường Số 1 - 1 lần</div>`)[0];
+                popup_c708ade49a0fbb94a70c64e5f733a7ab.setContent(html_c683e7976061670b67b89fe3793892b9);
+            
+        
+
+        circle_marker_8080d1bcc671dd56d409ca75c0ab4ef5.bindPopup(popup_c708ade49a0fbb94a70c64e5f733a7ab)
+        ;
+
+        
+    
+    
+            var circle_marker_666204ee12794a0b44dc126376510202 = L.circleMarker(
+                [10.8425897, 106.6578654],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_829eb5d6df2ca4c64df6aec9f78987c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e322f9fc7e378ef0c027a5ad55b5d5c = $(`<div id="html_9e322f9fc7e378ef0c027a5ad55b5d5c" style="width: 100.0%; height: 100.0%;">Tiệm Bánh Boom Boom - 1 lần</div>`)[0];
+                popup_829eb5d6df2ca4c64df6aec9f78987c4.setContent(html_9e322f9fc7e378ef0c027a5ad55b5d5c);
+            
+        
+
+        circle_marker_666204ee12794a0b44dc126376510202.bindPopup(popup_829eb5d6df2ca4c64df6aec9f78987c4)
+        ;
+
+        
+    
+    
+            var circle_marker_7375a35f9b0a6d81515b56d0d59c6cb2 = L.circleMarker(
+                [10.7705041, 106.6473179],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_5a5aa4c82985c7b35abdbab03b3c174d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c9417d5045defb46c96760538002ba7 = $(`<div id="html_7c9417d5045defb46c96760538002ba7" style="width: 100.0%; height: 100.0%;">Công Ty TNHH Nhôm Đúc Minh Đức - 3 lần</div>`)[0];
+                popup_5a5aa4c82985c7b35abdbab03b3c174d.setContent(html_7c9417d5045defb46c96760538002ba7);
+            
+        
+
+        circle_marker_7375a35f9b0a6d81515b56d0d59c6cb2.bindPopup(popup_5a5aa4c82985c7b35abdbab03b3c174d)
+        ;
+
+        
+    
+    
+            var circle_marker_f8ccfb2a80006cebc01835415c16d6fb = L.circleMarker(
+                [10.8472572, 106.6416573],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_dbd4ecaa51dfc2b2b9c9fc91c6a312c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e48e967034f78a387e8e89a09036b896 = $(`<div id="html_e48e967034f78a387e8e89a09036b896" style="width: 100.0%; height: 100.0%;">Công Ty TNHH Thương Mại Dịch Vụ Và Truyền Thông VT House - 1 lần</div>`)[0];
+                popup_dbd4ecaa51dfc2b2b9c9fc91c6a312c2.setContent(html_e48e967034f78a387e8e89a09036b896);
+            
+        
+
+        circle_marker_f8ccfb2a80006cebc01835415c16d6fb.bindPopup(popup_dbd4ecaa51dfc2b2b9c9fc91c6a312c2)
+        ;
+
+        
+    
+    
+            var circle_marker_e2f4e0da3809b110b24bd63faaa4535a = L.circleMarker(
+                [10.8424299, 106.654402],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_571ead8dae9cd1ed65e60dd28ea0aeba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c6c07086b7c9dcfd9deddd4e2ae542b = $(`<div id="html_1c6c07086b7c9dcfd9deddd4e2ae542b" style="width: 100.0%; height: 100.0%;">Lẩu An Khang - 1 lần</div>`)[0];
+                popup_571ead8dae9cd1ed65e60dd28ea0aeba.setContent(html_1c6c07086b7c9dcfd9deddd4e2ae542b);
+            
+        
+
+        circle_marker_e2f4e0da3809b110b24bd63faaa4535a.bindPopup(popup_571ead8dae9cd1ed65e60dd28ea0aeba)
+        ;
+
+        
+    
+    
+            var circle_marker_a845cc76d7e07e0b45ef218c53d89228 = L.circleMarker(
+                [10.77738, 106.664011],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_d71b346badd0fd0d34b87982e66e5951 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_545837e56d310a37835076353134216c = $(`<div id="html_545837e56d310a37835076353134216c" style="width: 100.0%; height: 100.0%;">Cột Điện Kitchen - Lẩu & Món Nướng - 3 lần</div>`)[0];
+                popup_d71b346badd0fd0d34b87982e66e5951.setContent(html_545837e56d310a37835076353134216c);
+            
+        
+
+        circle_marker_a845cc76d7e07e0b45ef218c53d89228.bindPopup(popup_d71b346badd0fd0d34b87982e66e5951)
+        ;
+
+        
+    
+    
+            var circle_marker_c6709a98955feb1b5a5539707f02b4b9 = L.circleMarker(
+                [10.7830856, 106.6348805],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_e828e7c8084372c95a75c82818bd8ba5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_751cdd86e8f841f95e98a5ae5a693f53 = $(`<div id="html_751cdd86e8f841f95e98a5ae5a693f53" style="width: 100.0%; height: 100.0%;">Cửa Hàng Phụ Liệu May Mặc Thanh Kiều - 1 lần</div>`)[0];
+                popup_e828e7c8084372c95a75c82818bd8ba5.setContent(html_751cdd86e8f841f95e98a5ae5a693f53);
+            
+        
+
+        circle_marker_c6709a98955feb1b5a5539707f02b4b9.bindPopup(popup_e828e7c8084372c95a75c82818bd8ba5)
+        ;
+
+        
+    
+    
+            var circle_marker_8b3ca399e491284cfabb8f2fe8eb4d34 = L.circleMarker(
+                [10.78737562, 106.6407802],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_7fe25bbe1bb069f104035acbc9f5ca23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_466ea6bf41974ee721d41017f1635187 = $(`<div id="html_466ea6bf41974ee721d41017f1635187" style="width: 100.0%; height: 100.0%;">VP bank - 2 lần</div>`)[0];
+                popup_7fe25bbe1bb069f104035acbc9f5ca23.setContent(html_466ea6bf41974ee721d41017f1635187);
+            
+        
+
+        circle_marker_8b3ca399e491284cfabb8f2fe8eb4d34.bindPopup(popup_7fe25bbe1bb069f104035acbc9f5ca23)
+        ;
+
+        
+    
+    
+            var circle_marker_9a3db7e620087cd9e109f20466ee4c33 = L.circleMarker(
+                [10.7985409, 106.6328574],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_46d1f1a3d9c67e2bf24321a20154cd43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f511de113ee7a66282db70977b1dea98 = $(`<div id="html_f511de113ee7a66282db70977b1dea98" style="width: 100.0%; height: 100.0%;">Quán Bò Tùng Xẻo Chân Mây & Lương Sơn Quán - 1 lần</div>`)[0];
+                popup_46d1f1a3d9c67e2bf24321a20154cd43.setContent(html_f511de113ee7a66282db70977b1dea98);
+            
+        
+
+        circle_marker_9a3db7e620087cd9e109f20466ee4c33.bindPopup(popup_46d1f1a3d9c67e2bf24321a20154cd43)
+        ;
+
+        
+    
+    
+            var circle_marker_3af8bcd9856e45502c30a1f8c8805845 = L.circleMarker(
+                [10.78737562, 106.6407802],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_f9e75b6a98140a6bf24a85d529bc6bf0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fee77b18b4917f78282f4b722e3b6f8 = $(`<div id="html_1fee77b18b4917f78282f4b722e3b6f8" style="width: 100.0%; height: 100.0%;">VP bank - 2 lần</div>`)[0];
+                popup_f9e75b6a98140a6bf24a85d529bc6bf0.setContent(html_1fee77b18b4917f78282f4b722e3b6f8);
+            
+        
+
+        circle_marker_3af8bcd9856e45502c30a1f8c8805845.bindPopup(popup_f9e75b6a98140a6bf24a85d529bc6bf0)
+        ;
+
+        
+    
+    
+            var circle_marker_7ad6d6c8bacc2cc70363b988792645cd = L.circleMarker(
+                [10.775403, 106.628211],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_520690a5e7656f5108ea710762806606 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fc0056e1c79c6d496d2dd3d415c646d = $(`<div id="html_1fc0056e1c79c6d496d2dd3d415c646d" style="width: 100.0%; height: 100.0%;">QUÁN ỐC ĐÊM - 4 lần</div>`)[0];
+                popup_520690a5e7656f5108ea710762806606.setContent(html_1fc0056e1c79c6d496d2dd3d415c646d);
+            
+        
+
+        circle_marker_7ad6d6c8bacc2cc70363b988792645cd.bindPopup(popup_520690a5e7656f5108ea710762806606)
+        ;
+
+        
+    
+    
+            var circle_marker_60790f0757d3e1c961b744ca7d4f9fa1 = L.circleMarker(
+                [10.775403, 106.628211],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_1f3526629e73426c6f84e2159249f7dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41d70ca0f1c5b5acee37df1826a3f2c5 = $(`<div id="html_41d70ca0f1c5b5acee37df1826a3f2c5" style="width: 100.0%; height: 100.0%;">QUÁN ỐC ĐÊM - 4 lần</div>`)[0];
+                popup_1f3526629e73426c6f84e2159249f7dd.setContent(html_41d70ca0f1c5b5acee37df1826a3f2c5);
+            
+        
+
+        circle_marker_60790f0757d3e1c961b744ca7d4f9fa1.bindPopup(popup_1f3526629e73426c6f84e2159249f7dd)
+        ;
+
+        
+    
+    
+            var circle_marker_e2752d57d3f62559b21b3bc2896af1cd = L.circleMarker(
+                [10.78405236040406, 106.6250024267628],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_975797207ff116217bee70963d644bcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3dbd844056077e3f2a72f94afd6bc0a9 = $(`<div id="html_3dbd844056077e3f2a72f94afd6bc0a9" style="width: 100.0%; height: 100.0%;">19-19A Hoàng Ngọc Phách - 2 lần</div>`)[0];
+                popup_975797207ff116217bee70963d644bcb.setContent(html_3dbd844056077e3f2a72f94afd6bc0a9);
+            
+        
+
+        circle_marker_e2752d57d3f62559b21b3bc2896af1cd.bindPopup(popup_975797207ff116217bee70963d644bcb)
+        ;
+
+        
+    
+    
+            var circle_marker_49029adc145c4bcc2a515220e0de7b4c = L.circleMarker(
+                [10.78405236040406, 106.6250024267628],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_9987401facc0972bce51a1a2d1ffcbcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_952877e914d20db5bb512df84172316d = $(`<div id="html_952877e914d20db5bb512df84172316d" style="width: 100.0%; height: 100.0%;">19-19A Hoàng Ngọc Phách - 2 lần</div>`)[0];
+                popup_9987401facc0972bce51a1a2d1ffcbcb.setContent(html_952877e914d20db5bb512df84172316d);
+            
+        
+
+        circle_marker_49029adc145c4bcc2a515220e0de7b4c.bindPopup(popup_9987401facc0972bce51a1a2d1ffcbcb)
+        ;
+
+        
+    
+    
+            var circle_marker_dae8dc73bac9a2f58482beac1107fa85 = L.circleMarker(
+                [10.8360829, 106.6222655],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_f670cea3b46aa6ea3ad09c10b488147c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66f0166f1268025375d0abd977692ce4 = $(`<div id="html_66f0166f1268025375d0abd977692ce4" style="width: 100.0%; height: 100.0%;">Đại Lý Gạo - 1 lần</div>`)[0];
+                popup_f670cea3b46aa6ea3ad09c10b488147c.setContent(html_66f0166f1268025375d0abd977692ce4);
+            
+        
+
+        circle_marker_dae8dc73bac9a2f58482beac1107fa85.bindPopup(popup_f670cea3b46aa6ea3ad09c10b488147c)
+        ;
+
+        
+    
+    
+            var circle_marker_8781fd68fbb7b617fd7b8fd0dbe96dc2 = L.circleMarker(
+                [10.8910524964327, 106.6479407446841],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_33b97375667325f18fe729e30f264dcd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fef6f3c80f00ec97d3551ca8488ebbb3 = $(`<div id="html_fef6f3c80f00ec97d3551ca8488ebbb3" style="width: 100.0%; height: 100.0%;">662/11 Lê Văn Khương - 1 lần</div>`)[0];
+                popup_33b97375667325f18fe729e30f264dcd.setContent(html_fef6f3c80f00ec97d3551ca8488ebbb3);
+            
+        
+
+        circle_marker_8781fd68fbb7b617fd7b8fd0dbe96dc2.bindPopup(popup_33b97375667325f18fe729e30f264dcd)
+        ;
+
+        
+    
+    
+            var circle_marker_cd813c1e969952d09cb64551556c32ba = L.circleMarker(
+                [10.831719, 106.624132],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_0cc2afe8749c6b899dbb55ac61e1e4bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6ee379872520eb060cd46d0442a0c70 = $(`<div id="html_a6ee379872520eb060cd46d0442a0c70" style="width: 100.0%; height: 100.0%;">Quán ốc sáng đêm - 1 lần</div>`)[0];
+                popup_0cc2afe8749c6b899dbb55ac61e1e4bf.setContent(html_a6ee379872520eb060cd46d0442a0c70);
+            
+        
+
+        circle_marker_cd813c1e969952d09cb64551556c32ba.bindPopup(popup_0cc2afe8749c6b899dbb55ac61e1e4bf)
+        ;
+
+        
+    
+    
+            var circle_marker_cf2cbb09ebcc2ca002ce729a31ec39f8 = L.circleMarker(
+                [10.7968392, 106.6480537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_6804a230c22513aba866ab242591d83a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b343ccc755261e1a30a20ab932b479b9 = $(`<div id="html_b343ccc755261e1a30a20ab932b479b9" style="width: 100.0%; height: 100.0%;">Trường Mầm Non Hươu Vàng - 1 lần</div>`)[0];
+                popup_6804a230c22513aba866ab242591d83a.setContent(html_b343ccc755261e1a30a20ab932b479b9);
+            
+        
+
+        circle_marker_cf2cbb09ebcc2ca002ce729a31ec39f8.bindPopup(popup_6804a230c22513aba866ab242591d83a)
+        ;
+
+        
+    
+    
+            var circle_marker_6379e0e06e7a5ee9ed08b406ced56b9f = L.circleMarker(
+                [10.7946999, 106.6298855],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_2536e9272ce35f2c4b3bbaa5b89f67e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_228f9b4a8ea2261c7cc566ff665cccca = $(`<div id="html_228f9b4a8ea2261c7cc566ff665cccca" style="width: 100.0%; height: 100.0%;">Lẩu gà lá é Quán 8 râu - 2 lần</div>`)[0];
+                popup_2536e9272ce35f2c4b3bbaa5b89f67e3.setContent(html_228f9b4a8ea2261c7cc566ff665cccca);
+            
+        
+
+        circle_marker_6379e0e06e7a5ee9ed08b406ced56b9f.bindPopup(popup_2536e9272ce35f2c4b3bbaa5b89f67e3)
+        ;
+
+        
+    
+    
+            var circle_marker_37bdcee3977f68bd34ae59ead39e8b51 = L.circleMarker(
+                [10.7946999, 106.6298855],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_39836e6463e0e1036251d0fb7ad7d016 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4849cae11a35e5462b48f40c3b7dde79 = $(`<div id="html_4849cae11a35e5462b48f40c3b7dde79" style="width: 100.0%; height: 100.0%;">Lẩu gà lá é Quán 8 râu - 2 lần</div>`)[0];
+                popup_39836e6463e0e1036251d0fb7ad7d016.setContent(html_4849cae11a35e5462b48f40c3b7dde79);
+            
+        
+
+        circle_marker_37bdcee3977f68bd34ae59ead39e8b51.bindPopup(popup_39836e6463e0e1036251d0fb7ad7d016)
+        ;
+
+        
+    
+    
+            var circle_marker_85333e3f400a44895251e471be1e2879 = L.circleMarker(
+                [10.79402126, 106.630985],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_8faa3a7da6e50e650d8304a6f512cb12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98ebdfe7dc5af8bb6dff57bdf124b88c = $(`<div id="html_98ebdfe7dc5af8bb6dff57bdf124b88c" style="width: 100.0%; height: 100.0%;">Nhà Hàng Thuỷ Cung 257 - 3 lần</div>`)[0];
+                popup_8faa3a7da6e50e650d8304a6f512cb12.setContent(html_98ebdfe7dc5af8bb6dff57bdf124b88c);
+            
+        
+
+        circle_marker_85333e3f400a44895251e471be1e2879.bindPopup(popup_8faa3a7da6e50e650d8304a6f512cb12)
+        ;
+
+        
+    
+    
+            var circle_marker_a308453332993ab59145135dfe551e6c = L.circleMarker(
+                [10.79402126, 106.630985],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_7fce761f04bda67d9e05bd8836e2c89c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_878f3be2ae168b4538e886bd6a84ad55 = $(`<div id="html_878f3be2ae168b4538e886bd6a84ad55" style="width: 100.0%; height: 100.0%;">Nhà Hàng Thuỷ Cung 257 - 3 lần</div>`)[0];
+                popup_7fce761f04bda67d9e05bd8836e2c89c.setContent(html_878f3be2ae168b4538e886bd6a84ad55);
+            
+        
+
+        circle_marker_a308453332993ab59145135dfe551e6c.bindPopup(popup_7fce761f04bda67d9e05bd8836e2c89c)
+        ;
+
+        
+    
+    
+            var circle_marker_009dd1bb177db9fbbd8fd7f7546da221 = L.circleMarker(
+                [10.8066182, 106.6010445],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_6dfd48786e4d9eb4296aa125614edd9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee73cc32dbe2a4533d0c0278084ad345 = $(`<div id="html_ee73cc32dbe2a4533d0c0278084ad345" style="width: 100.0%; height: 100.0%;">Công Ty Tnhh Xây Dựng Thương Mại Dịch Vụ Tân Thành - 2 lần</div>`)[0];
+                popup_6dfd48786e4d9eb4296aa125614edd9f.setContent(html_ee73cc32dbe2a4533d0c0278084ad345);
+            
+        
+
+        circle_marker_009dd1bb177db9fbbd8fd7f7546da221.bindPopup(popup_6dfd48786e4d9eb4296aa125614edd9f)
+        ;
+
+        
+    
+    
+            var circle_marker_02bb40d057ffc9784a49f9461a143040 = L.circleMarker(
+                [10.8066182, 106.6010445],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_c2820166216aa4dfdae4fd8be04aedbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ee30db428f6a387a887c93a00d7be4e = $(`<div id="html_4ee30db428f6a387a887c93a00d7be4e" style="width: 100.0%; height: 100.0%;">Công Ty Tnhh Xây Dựng Thương Mại Dịch Vụ Tân Thành - 2 lần</div>`)[0];
+                popup_c2820166216aa4dfdae4fd8be04aedbf.setContent(html_4ee30db428f6a387a887c93a00d7be4e);
+            
+        
+
+        circle_marker_02bb40d057ffc9784a49f9461a143040.bindPopup(popup_c2820166216aa4dfdae4fd8be04aedbf)
+        ;
+
+        
+    
+    
+            var circle_marker_3b96012c57125a390024e924d216ab7e = L.circleMarker(
+                [10.7856628, 106.6071665],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_8aad87b268f8ff6dcb700721ae60a0a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa2e10510988450f46f63adf5389d859 = $(`<div id="html_fa2e10510988450f46f63adf5389d859" style="width: 100.0%; height: 100.0%;">Cửa Hàng Tạp Hóa Ao Sen - 1 lần</div>`)[0];
+                popup_8aad87b268f8ff6dcb700721ae60a0a7.setContent(html_fa2e10510988450f46f63adf5389d859);
+            
+        
+
+        circle_marker_3b96012c57125a390024e924d216ab7e.bindPopup(popup_8aad87b268f8ff6dcb700721ae60a0a7)
+        ;
+
+        
+    
+    
+            var circle_marker_7967a0d5013cf5b0c4b5fbe22f92bca1 = L.circleMarker(
+                [10.79402126, 106.630985],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_8560ee4af7565a981f557ad4a912aeda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d00732af665c4a3c60df7ade9188ec3c = $(`<div id="html_d00732af665c4a3c60df7ade9188ec3c" style="width: 100.0%; height: 100.0%;">Nhà Hàng Thuỷ Cung 257 - 3 lần</div>`)[0];
+                popup_8560ee4af7565a981f557ad4a912aeda.setContent(html_d00732af665c4a3c60df7ade9188ec3c);
+            
+        
+
+        circle_marker_7967a0d5013cf5b0c4b5fbe22f92bca1.bindPopup(popup_8560ee4af7565a981f557ad4a912aeda)
+        ;
+
+        
+    
+    
+            var circle_marker_8cb09d15952021966cae585a93287bc2 = L.circleMarker(
+                [10.764528, 106.6269809],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_436003fe368dfa9146229437b0a14d6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b68b3667ca86b17c5ac9581fad73ed3 = $(`<div id="html_2b68b3667ca86b17c5ac9581fad73ed3" style="width: 100.0%; height: 100.0%;">Tô Hiệu - 1 lần</div>`)[0];
+                popup_436003fe368dfa9146229437b0a14d6b.setContent(html_2b68b3667ca86b17c5ac9581fad73ed3);
+            
+        
+
+        circle_marker_8cb09d15952021966cae585a93287bc2.bindPopup(popup_436003fe368dfa9146229437b0a14d6b)
+        ;
+
+        
+    
+    
+            var circle_marker_b0dba38d1df1361270e22a25aaf71638 = L.circleMarker(
+                [10.7931292, 106.6270587],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_0b8c37a207bf3b8de3ac4d8d81bd0a34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd3feebf3863f9a4dfc1c0c54c2c9d35 = $(`<div id="html_dd3feebf3863f9a4dfc1c0c54c2c9d35" style="width: 100.0%; height: 100.0%;">Quán Ăn Lượm Lúa - 1 lần</div>`)[0];
+                popup_0b8c37a207bf3b8de3ac4d8d81bd0a34.setContent(html_dd3feebf3863f9a4dfc1c0c54c2c9d35);
+            
+        
+
+        circle_marker_b0dba38d1df1361270e22a25aaf71638.bindPopup(popup_0b8c37a207bf3b8de3ac4d8d81bd0a34)
+        ;
+
+        
+    
+    
+            var circle_marker_6af25e2f1961754a3f06cdea194013e3 = L.circleMarker(
+                [10.8385524, 106.670288],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_a9ef7661e55107792e6605e2305c52c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c88b7a8f5a807966a2274f47b5a0a63 = $(`<div id="html_3c88b7a8f5a807966a2274f47b5a0a63" style="width: 100.0%; height: 100.0%;">255 FOOD GARDEN - 2 lần</div>`)[0];
+                popup_a9ef7661e55107792e6605e2305c52c2.setContent(html_3c88b7a8f5a807966a2274f47b5a0a63);
+            
+        
+
+        circle_marker_6af25e2f1961754a3f06cdea194013e3.bindPopup(popup_a9ef7661e55107792e6605e2305c52c2)
+        ;
+
+        
+    
+    
+            var circle_marker_44021753072baddb37b39ac69af99abc = L.circleMarker(
+                [10.8385524, 106.670288],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_807a2aeb0a61d97156382b21f8d54f1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddea4a430e0920d1cc0d054b1fe44e53 = $(`<div id="html_ddea4a430e0920d1cc0d054b1fe44e53" style="width: 100.0%; height: 100.0%;">255 FOOD GARDEN - 2 lần</div>`)[0];
+                popup_807a2aeb0a61d97156382b21f8d54f1e.setContent(html_ddea4a430e0920d1cc0d054b1fe44e53);
+            
+        
+
+        circle_marker_44021753072baddb37b39ac69af99abc.bindPopup(popup_807a2aeb0a61d97156382b21f8d54f1e)
+        ;
+
+        
+    
+    
+            var circle_marker_553a0c4a8002536f0389e8cef28f600b = L.circleMarker(
+                [10.8482914, 106.6335192],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_cf6ba77a1eca007622bbe505224353e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ff7f81a96fbe52735d4c800d72e8f68 = $(`<div id="html_6ff7f81a96fbe52735d4c800d72e8f68" style="width: 100.0%; height: 100.0%;">Karaoke ICOOL - 10 lần</div>`)[0];
+                popup_cf6ba77a1eca007622bbe505224353e5.setContent(html_6ff7f81a96fbe52735d4c800d72e8f68);
+            
+        
+
+        circle_marker_553a0c4a8002536f0389e8cef28f600b.bindPopup(popup_cf6ba77a1eca007622bbe505224353e5)
+        ;
+
+        
+    
+    
+            var circle_marker_7d987ec9f436042a375f95b3cb5f7449 = L.circleMarker(
+                [10.8194599, 106.6921299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_66712df5bcad3810475d0d3cac613ceb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af01fc2179d805572d287a21e669cee9 = $(`<div id="html_af01fc2179d805572d287a21e669cee9" style="width: 100.0%; height: 100.0%;">Cửa hàng tin học Lộc Phát - 2 lần</div>`)[0];
+                popup_66712df5bcad3810475d0d3cac613ceb.setContent(html_af01fc2179d805572d287a21e669cee9);
+            
+        
+
+        circle_marker_7d987ec9f436042a375f95b3cb5f7449.bindPopup(popup_66712df5bcad3810475d0d3cac613ceb)
+        ;
+
+        
+    
+    
+            var circle_marker_2a1d5b65f82804c0bdb92e026c4c8eac = L.circleMarker(
+                [10.8194599, 106.6921299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_a5b99223b5c31e5a4fa2c2fcb842be8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c011f5e7f9495e325cf99853fc3ba5e = $(`<div id="html_7c011f5e7f9495e325cf99853fc3ba5e" style="width: 100.0%; height: 100.0%;">Cửa hàng tin học Lộc Phát - 2 lần</div>`)[0];
+                popup_a5b99223b5c31e5a4fa2c2fcb842be8c.setContent(html_7c011f5e7f9495e325cf99853fc3ba5e);
+            
+        
+
+        circle_marker_2a1d5b65f82804c0bdb92e026c4c8eac.bindPopup(popup_a5b99223b5c31e5a4fa2c2fcb842be8c)
+        ;
+
+        
+    
+    
+            var circle_marker_577014caae651deeea2c0df97b8452bd = L.circleMarker(
+                [10.867426, 106.6310663],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_be58ff12b4f293ec47087e8e073e9482 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd1fd6bceeb2ad32df78f3b5876be83e = $(`<div id="html_fd1fd6bceeb2ad32df78f3b5876be83e" style="width: 100.0%; height: 100.0%;">Quán nhậu 77 - 1 lần</div>`)[0];
+                popup_be58ff12b4f293ec47087e8e073e9482.setContent(html_fd1fd6bceeb2ad32df78f3b5876be83e);
+            
+        
+
+        circle_marker_577014caae651deeea2c0df97b8452bd.bindPopup(popup_be58ff12b4f293ec47087e8e073e9482)
+        ;
+
+        
+    
+    
+            var circle_marker_1213ee094ded9682bf0878f481d35366 = L.circleMarker(
+                [10.8760771, 106.59498],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_9057510f83b589740bd757387242db22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bde5345c89a403f45fec0484306cc37 = $(`<div id="html_6bde5345c89a403f45fec0484306cc37" style="width: 100.0%; height: 100.0%;">Song Hành - 1 lần</div>`)[0];
+                popup_9057510f83b589740bd757387242db22.setContent(html_6bde5345c89a403f45fec0484306cc37);
+            
+        
+
+        circle_marker_1213ee094ded9682bf0878f481d35366.bindPopup(popup_9057510f83b589740bd757387242db22)
+        ;
+
+        
+    
+    
+            var circle_marker_dbd90a6639bf5f9ae339320f524d1ce8 = L.circleMarker(
+                [10.8429159, 106.6534892],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_e444f6de97dc27236f6e7ff6e4a76e7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_368f5fd1ac3b9f1e26179562c583b9fb = $(`<div id="html_368f5fd1ac3b9f1e26179562c583b9fb" style="width: 100.0%; height: 100.0%;">Ốc Ngon Thiện Ý - 1 lần</div>`)[0];
+                popup_e444f6de97dc27236f6e7ff6e4a76e7f.setContent(html_368f5fd1ac3b9f1e26179562c583b9fb);
+            
+        
+
+        circle_marker_dbd90a6639bf5f9ae339320f524d1ce8.bindPopup(popup_e444f6de97dc27236f6e7ff6e4a76e7f)
+        ;
+
+        
+    
+    
+            var circle_marker_5e18a9fbdd0e0a0896e48d4ad20e09e7 = L.circleMarker(
+                [10.7706968, 106.5516962],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_3c8de091b3d67623e1df678404dd7be6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fd47348218fe3c2a7334f058ff95767 = $(`<div id="html_1fd47348218fe3c2a7334f058ff95767" style="width: 100.0%; height: 100.0%;">Vĩnh Lộc - 1 lần</div>`)[0];
+                popup_3c8de091b3d67623e1df678404dd7be6.setContent(html_1fd47348218fe3c2a7334f058ff95767);
+            
+        
+
+        circle_marker_5e18a9fbdd0e0a0896e48d4ad20e09e7.bindPopup(popup_3c8de091b3d67623e1df678404dd7be6)
+        ;
+
+        
+    
+    
+            var circle_marker_3ca11cd5eae7f438ae6b172f499119f6 = L.circleMarker(
+                [10.861261, 106.6054004],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_353d008437484d43bbe5380bba4eaf34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f794a2ea17b8b94e4c55c7fab6c7fe31 = $(`<div id="html_f794a2ea17b8b94e4c55c7fab6c7fe31" style="width: 100.0%; height: 100.0%;">Tiệm Điện Hùng - 1 lần</div>`)[0];
+                popup_353d008437484d43bbe5380bba4eaf34.setContent(html_f794a2ea17b8b94e4c55c7fab6c7fe31);
+            
+        
+
+        circle_marker_3ca11cd5eae7f438ae6b172f499119f6.bindPopup(popup_353d008437484d43bbe5380bba4eaf34)
+        ;
+
+        
+    
+    
+            var circle_marker_34e92fd9d1afdaa89749b719953237ba = L.circleMarker(
+                [10.8203339, 106.6310628],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+        var popup_ba41c90858e21e5a02361e099fa5e67c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81c060495d7eaad646fc3e14fd3f1930 = $(`<div id="html_81c060495d7eaad646fc3e14fd3f1930" style="width: 100.0%; height: 100.0%;">Nhà Văn Hoá Phường 15 - 1 lần</div>`)[0];
+                popup_ba41c90858e21e5a02361e099fa5e67c.setContent(html_81c060495d7eaad646fc3e14fd3f1930);
+            
+        
+
+        circle_marker_34e92fd9d1afdaa89749b719953237ba.bindPopup(popup_ba41c90858e21e5a02361e099fa5e67c)
+        ;
+
+        
+    
+    
+            var marker_2b5db25a55444961fa4e15683eeef88a = L.marker(
+                [10.7816, 106.633],
+                {
+}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+            var icon_3313b2159d2620282639d1e854ceac92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8641e5ffedfb34a8a964831870ede3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a9c12ada255e37306536fc42de44f76 = $(`<div id="html_3a9c12ada255e37306536fc42de44f76" style="width: 100.0%; height: 100.0%;">Chi nhánh</div>`)[0];
+                popup_a8641e5ffedfb34a8a964831870ede3d.setContent(html_3a9c12ada255e37306536fc42de44f76);
+            
+        
+
+        marker_2b5db25a55444961fa4e15683eeef88a.bindPopup(popup_a8641e5ffedfb34a8a964831870ede3d)
+        ;
+
+        
+    
+    
+                marker_2b5db25a55444961fa4e15683eeef88a.setIcon(icon_3313b2159d2620282639d1e854ceac92);
+            
+    
+            var circle_398c9cdaff3a5051f76e8af68d24cf20 = L.circle(
+                [10.7816, 106.633],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+            var marker_95ca39bfe657d97461adf692259a3d5e = L.marker(
+                [10.8502, 106.632],
+                {
+}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+            var icon_a022c0af8e76748183b80bdf722d9c55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa52acf037330e5f11e2cf5b033f40d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a4b5bb1fc1da407c2ebb1a6a61ca200 = $(`<div id="html_1a4b5bb1fc1da407c2ebb1a6a61ca200" style="width: 100.0%; height: 100.0%;">Chi nhánh</div>`)[0];
+                popup_fa52acf037330e5f11e2cf5b033f40d1.setContent(html_1a4b5bb1fc1da407c2ebb1a6a61ca200);
+            
+        
+
+        marker_95ca39bfe657d97461adf692259a3d5e.bindPopup(popup_fa52acf037330e5f11e2cf5b033f40d1)
+        ;
+
+        
+    
+    
+                marker_95ca39bfe657d97461adf692259a3d5e.setIcon(icon_a022c0af8e76748183b80bdf722d9c55);
+            
+    
+            var circle_bfae0f778add8622a4518582fc3ae444 = L.circle(
+                [10.8502, 106.632],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5fd5a734d5b91a244682502165008e95);
+        
+    
+            feature_group_5fd5a734d5b91a244682502165008e95.addTo(map_ce34491cc64b95e4a932f152ed6d98da);
+        
+    
+            var layer_control_19941a5fe45eb77c5d2ab56c4fcb760c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_eaf32d0fed555461070785b136ac8b7e,
+                },
+                overlays :  {
+                    "1 2025" : feature_group_d3ec33bb305d5798d913087f9c56716b,
+                    "2 2025" : feature_group_5fd5a734d5b91a244682502165008e95,
+                },
+            };
+            let layer_control_19941a5fe45eb77c5d2ab56c4fcb760c = L.control.layers(
+                layer_control_19941a5fe45eb77c5d2ab56c4fcb760c_layers.base_layers,
+                layer_control_19941a5fe45eb77c5d2ab56c4fcb760c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_ce34491cc64b95e4a932f152ed6d98da);
+
+        
+</script>
+</html>
